@@ -1,10 +1,18 @@
-import Image from "next/image";
+import { HeroSection } from "@/components/home/Hero";
+import { TechStack } from "@/components/home/tech-stack";
+import { ServicesSection } from "@/components/home/Services";
+import { PortfolioSection } from "@/components/home/protfolio";
+
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-     
-    welcome to my profile Darey OLowo 
+    <div className=" bg-background">
+      <HeroSection />
+      <TechStack />
+      <ServicesSection />
+      <PortfolioSection />
+    
     </div>
+   
   );
 }
