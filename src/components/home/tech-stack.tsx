@@ -1,53 +1,119 @@
+"use client";
 import { Badge } from "@/components/ui/badge";
+import { motion, Variants } from "framer-motion";
+import {
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiReact,
+  SiNextdotjs,
+  SiTypescript,
+  SiRust,
+  SiGit,
+  SiGithub,
+} from "react-icons/si";
 
-type TechItem = {
-  name: string;
-  icon: string;
+// Animation variants
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1, // Faster stagger for smoother sequential appearance
+      delayChildren: 0.3, // Initial delay before first item appears
+    },
+  },
 };
 
-const techStack: TechItem[] = [
-  { name: "HTML", icon: "🐳" },
-  { name: "CSS", icon: "☁️" },
-  { name: "JavaScript", icon: "🟨" },
-  { name: "React", icon: "⚛️" },
-  { name: "Next.js", icon: "▲" },
-  { name: "TypeScript", icon: "📘" },
-  { name: "Cairo", icon: "🟢" },
-  { name: "Git", icon: "📝" },
+const item: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 20, // Start slightly below
+    scale: 0.9, // Start slightly smaller
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.5, // Smooth fade duration
+      ease: "easeInOut",
+    },
+  },
+  hover: {
+    scale: 1.05,
+    y: -5, // Slight lift on hover
+    transition: {
+      duration: 0.2,
+      ease: "easeOut",
+    },
+  },
+};
+
+const skills = [
+  { name: "HTML", icon: <SiHtml5 className="text-orange-600" /> },
+  { name: "CSS", icon: <SiCss3 className="text-blue-600" /> },
+  { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
+  { name: "React", icon: <SiReact className="text-cyan-400" /> },
+  { name: "Next.js", icon: <SiNextdotjs className="text-white" /> },
+  { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
+  { name: "Cairo", icon: <SiRust className="text-green-500" /> },
+  { name: "Git", icon: <SiGit className="text-red-500" /> },
+  { name: "GitHub", icon: <SiGithub className="text-gray-200" /> },
 ];
 
 export function TechStack() {
   return (
-    <section className="py-12 px-4">
+    <section className="py-20 px-4 bg-gradient-to-b from-background to-background/80">
       <div className="container mx-auto max-w-6xl">
         {/* Header Section */}
-        <div className="text-center mb-16">
-          <div className="inline-block mb-4">
-            <span className="text-sm font-semibold text-primary bg-primary/10 px-4 py-2 rounded-full border border-primary/20">
-              Technical Expertise
-            </span>
-          </div>
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+        >
           <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-foreground via-foreground to-primary bg-clip-text text-transparent">
-            Skills
+            Skills & Technologies
           </h2>
           <p className="text-muted-foreground text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-            Technologies and tools I work with to bring your ideas to life
+            I'm passionate about staying current with the latest technologies
+            and frameworks. With experience in frontend and web development, I
+            specialize in creating dynamic, responsive, and accessible
+            applications. Here are the technologies I work with:
           </p>
-        </div>
+        </motion.div>
 
         {/* Tech Stack Grid */}
-        <div className="flex flex-wrap justify-center gap-4 md:gap-6">
-          {techStack.map((tech) => (
-            <Badge
+        <motion.div
+          className="flex flex-wrap justify-center gap-4 md:gap-6"
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-50px" }}
+        >
+          {skills.map((tech, index) => (
+            <motion.div
               key={tech.name}
-              variant="secondary"
-              className="px-4 py-2 text-sm font-medium bg-card hover:bg-primary/10 transition-colors"
+              variants={item}
+              whileHover="hover"
+              className="w-32 h-32"
             >
-              <span className="mr-2">{tech.icon}</span>
-              {tech.name}
-            </Badge>
+              <Badge
+                variant="secondary"
+                className="px-10 py-10 text-base font-medium bg-card/50 hover:bg-card/80 backdrop-blur-sm border border-border/50 hover:border-primary/50 transition-all duration-300 w-full h-full flex items-center justify-center shadow-lg hover:shadow-xl"
+              >
+                <div className="flex flex-col items-center gap-3">
+                  <span className="text-4xl transition-transform duration-200">
+                    {tech.icon}
+                  </span>
+                  <span className="font-semibold text-lg">{tech.name}</span>
+                </div>
+              </Badge>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

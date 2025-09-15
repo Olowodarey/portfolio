@@ -3,65 +3,76 @@ import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const projects = [
+interface Project {
+  title: string;
+  description: string;
+  image: string;
+  tags: string[];
+  liveUrl: string;
+  githubUrl: string;
+  featured?: boolean;
+  stats?: {
+    stars: number;
+    forks: number;
+  };
+}
+
+const projects: Project[] = [
   {
     title: "VR School Platform",
-    description:
-      "An immersive educational platform built with Next.js and Three.js for virtual learning experiences",
+    description: "Immersive educational platform with Next.js & Three.js",
     image: "/vr-school-preview.jpg",
-    tags: ["Next.js", "Three.js", "Tailwind CSS"],
+    tags: ["react", "JS", "Tailwind"],
     liveUrl: "https://vr-sch-oictgg.vercel.app/",
     githubUrl: "#",
     featured: true,
     stats: { stars: 45, forks: 12 },
   },
   {
-    title: "PMovies - Movie Discovery App",
-    description:
-      "A modern movie discovery platform with search, filtering, and movie details",
+    title: "PMovies - Movie Discovery",
+    description: "Discover and explore movies with search and filtering",
     image: "/pmovies-preview.jpg",
-    tags: ["Next.js", "TMDB API", "Tailwind CSS"],
+    tags: ["Next.js", "TMDB API", "Tailwind"],
     liveUrl: "https://pmovies-two.vercel.app/",
     githubUrl: "#",
     featured: true,
     stats: { stars: 68, forks: 15 },
   },
   {
-    title: "Virtual Aid - Health Assistant",
-    description:
-      "An AI-powered health assistant providing medical information and support",
+    title: "Virtual Aid",
+    description: "AI-powered health assistant for medical information",
     image: "/virtual-aid-preview.jpg",
-    tags: ["Next.js", "AI Integration", "Health Tech"],
+    tags: ["Next.js", "AI", "Health"],
     liveUrl: "https://virtual-aid.vercel.app/",
     githubUrl: "#",
     featured: true,
     stats: { stars: 92, forks: 24 },
   },
   {
-    title: "Megastore - E-commerce Platform",
-    description: "A full-featured e-commerce platform with product catalog, cart, and checkout",
+    title: "Megastore",
+    description: "E-commerce platform with catalog and checkout",
     image: "/megastore-preview.jpg",
-    tags: ["Next.js", "E-commerce", "Payment Integration"],
+    tags: ["Next.js", "E-commerce", "Payments"],
     liveUrl: "https://megastore-snowy.vercel.app/",
     githubUrl: "#",
     featured: true,
     stats: { stars: 87, forks: 31 },
   },
   {
-    title: "SaveCircle - Financial Planning",
-    description: "A modern platform for personal finance management and savings goals",
+    title: "SaveCircle",
+    description: "Personal finance and savings management",
     image: "/savecircle-preview.jpg",
-    tags: ["React", "Financial Tech", "Dashboard"],
+    tags: ["React", "Finance", "Dashboard"],
     liveUrl: "https://savecircle.vercel.app/",
     githubUrl: "#",
     featured: true,
     stats: { stars: 64, forks: 18 },
   },
   {
-    title: "Web3 E-commerce Platform",
-    description: "A decentralized e-commerce platform with cryptocurrency payments",
+    title: "Web3 E-commerce",
+    description: "Decentralized store with crypto payments",
     image: "/web3-ecommerce-preview.jpg",
-    tags: ["Web3", "Ethereum", "Next.js"],
+    tags: ["Web3", "Ethereum", "Next"],
     liveUrl: "https://web3-ecommerce-roan.vercel.app/",
     githubUrl: "#",
     featured: true,
@@ -71,51 +82,49 @@ const projects = [
 
 export function PortfolioSection() {
   return (
-    <section className="py-20 px-4 relative overflow-hidden">
+    <section className="py-12 md:py-16 px-4 relative overflow-hidden">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div
-          className="absolute top-1/4 left-1/5 w-64 h-64 bg-primary/3 rounded-full blur-3xl animate-float"
+          className="absolute top-1/4 left-1/5 w-48 h-48 bg-primary/3 rounded-full blur-2xl animate-float"
           style={{ animationDelay: "2s" }}
         ></div>
         <div
-          className="absolute bottom-1/4 right-1/5 w-48 h-48 bg-primary/5 rounded-full blur-2xl animate-float"
+          className="absolute bottom-1/4 right-1/5 w-32 h-32 bg-primary/5 rounded-full blur-xl animate-float"
           style={{ animationDelay: "5s" }}
         ></div>
       </div>
 
       <div className="container mx-auto max-w-6xl relative z-10">
-        <div className="text-center mb-16">
-          <div className="inline-block mb-4">
-            <span className="text-sm font-semibold text-white bg-primary px-4 py-2 rounded-full border border-primary/20">
+        <div className="text-center mb-10">
+          <div className="inline-block mb-3">
+            <span className="text-xs font-medium text-primary bg-primary/10 px-3 py-1.5 rounded-full border border-primary/20">
               Recent Work
             </span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">
-            Portfolio
-          </h2>
-          <p className="text-muted-foreground text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-            Here are some of my recent projects that showcase my skills and
-            experience
+          <p className="text-muted-foreground text-sm md:text-base max-w-2xl mx-auto">
+            Here are some of my recent projects that showcase my skills
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {projects.map((project, index) => (
             <Card
               key={index}
-              className={`group glass-effect card-hover-effect border-border/50 hover:border-primary/30 overflow-hidden relative ${
+              className={`group relative overflow-hidden transition-all duration-300 hover:shadow-lg border-border/30 hover:border-primary/20 bg-card/50 backdrop-blur-sm ${
                 project.featured ? "md:col-span-2 lg:col-span-1" : ""
               }`}
-              style={{ animationDelay: `${index * 0.1}s` }}
+              style={{ 
+                animationDelay: `${index * 0.05}s`,
+                backdropFilter: 'blur(10px)'
+              }}
             >
-             
-
               <div className="relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 to-purple-50/30 dark:from-blue-900/10 dark:to-purple-900/10" />
                 {project.liveUrl !== "#" ? (
-                  <div className="w-full h-48 overflow-hidden relative">
+                  <div className="w-full h-32 overflow-hidden relative rounded-t-lg">
                     <iframe
                       src={project.liveUrl}
-                      className="w-full h-full border-0 overflow-hidden"
+                      className="w-full h-full border-0 scale-[1.01] origin-top"
                       loading="lazy"
                       title={`${project.title} Preview`}
                       sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
@@ -123,89 +132,77 @@ export function PortfolioSection() {
                       scrolling="no"
                       style={{ overflow: "hidden" }}
                     />
-                    <div className="absolute inset-0 pointer-events-none" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
                   </div>
                 ) : (
-                  <img
-                    src={
-                      project.image ||
-                      "/placeholder.svg?height=300&width=400&query=modern dashboard interface"
-                    }
-                    alt={project.title}
-                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
+                  <div className="w-full h-32 overflow-hidden relative rounded-t-lg bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30">
+                    <img
+                      src={project.image || "/placeholder.svg"}
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+                  </div>
                 )}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center gap-3">
-                  <Button
-                    size="sm"
-                    className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg animate-slide-up"
-                    asChild
-                  >
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      vist link
-                    </a>
-                  </Button>
-                  <Button
-                    size="sm"
-                    variant="secondary"
-                    className="bg-card/90 hover:bg-card shadow-lg animate-slide-up"
-                    style={{ animationDelay: "0.1s" }}
-                    asChild
-                  >
-                  
-                  </Button>
-                </div>
               </div>
 
-              <CardContent className="p-6">
-                <div className="flex items-start justify-between mb-3">
-                  <h3 className="text-lg font-bold group-hover:text-primary transition-colors duration-300 text-balance">
-                    {project.title}
-                  </h3>
-                  <div className="flex items-center gap-3 text-xs text-muted-foreground">
-                    <div className="flex items-center gap-1">
-                      <Star className="w-3 h-3" />
-                      {project.stats.stars}
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Github className="w-3 h-3" />
-                      {project.stats.forks}
-                    </div>
+              <CardContent className="p-5">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-sm font-medium">
+                    {project.title.charAt(0)}
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">
+                      {project.title}
+                    </h3>
+                    <p className="text-xs text-muted-foreground">Project</p>
                   </div>
                 </div>
 
-                <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+                <p className="text-sm text-foreground/80 mb-4 line-clamp-2 leading-relaxed">
                   {project.description}
                 </p>
 
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag, tagIndex) => (
-                    <Badge
-                      key={tag}
-                      variant="secondary"
-                      className="text-xs bg-primary/10 text-primary border-primary/20 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-                      style={{ animationDelay: `${tagIndex * 0.05}s` }}
-                    >
-                      {tag}
-                    </Badge>
-                  ))}
+                <div className="flex items-center justify-between">
+                  <div className="flex -space-x-2">
+                    {project.tags.slice(0, 3).map((tag, i) => (
+                      <div 
+                        key={i}
+                        className="w-6 h-6 rounded-full bg-muted border-2 border-background flex items-center justify-center text-[10px] font-medium text-muted-foreground"
+                        style={{ zIndex: 3 - i }}
+                      >
+                        {tag.charAt(0)}
+                      </div>
+                    ))}
+                    {project.tags.length > 3 && (
+                      <div className="w-6 h-6 rounded-full bg-muted/80 border-2 border-background flex items-center justify-center text-[10px] font-medium text-muted-foreground">
+                        +{project.tags.length - 3}
+                      </div>
+                    )}
+                  </div>
+                  
+                  <Button 
+                    size="sm" 
+                    variant="outline" 
+                    className="text-xs h-8 px-3 rounded-full border-border/50 hover:bg-primary/5 hover:border-primary/30 transition-colors"
+                    asChild
+                  >
+                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                      View Project
+                    </a>
+                  </Button>
                 </div>
               </CardContent>
             </Card>
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-10">
           <Button
-            size="lg"
-            className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-primary-foreground font-semibold px-8 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-primary/20"
+            size="default"
+            className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-primary-foreground font-medium px-6 py-5 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-primary/20 text-sm"
           >
-            <Github className="w-5 h-5 mr-2" />
+            <Github className="w-4 h-4 mr-2" />
             View All Projects
           </Button>
         </div>

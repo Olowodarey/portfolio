@@ -2,6 +2,7 @@
 
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
+
 type OnlyDustContribution = {
   title: string;
   url: string;
@@ -9,6 +10,7 @@ type OnlyDustContribution = {
   repository: string;
   description?: string;
   date: string;
+  type?: "Smart Contract" | "Frontend" ;
 };
 
 // Manually curated OnlyDust contributions
@@ -21,6 +23,7 @@ const onlyDustContributions: OnlyDustContribution[] = [
     description:
       "Implemented core smart contract functionality for decentralized crowdfunding platform",
     date: "2025",
+    type: "Smart Contract",
   },
   {
     title: "Contract Development",
@@ -30,6 +33,7 @@ const onlyDustContributions: OnlyDustContribution[] = [
     description:
       "Developed smart contracts for cross-border remittance solution",
     date: "2025",
+    type: "Smart Contract",
   },
   {
     title: "LyricsFlip Feature Implementation",
@@ -38,6 +42,7 @@ const onlyDustContributions: OnlyDustContribution[] = [
     repository: "songifi/lyricsflip",
     description: "Added new features to the song lyrics sharing platform",
     date: "2025",
+    type: "Frontend",
   },
   {
     title: "InheritX DApp Development",
@@ -46,6 +51,7 @@ const onlyDustContributions: OnlyDustContribution[] = [
     repository: "skill-mind/InheritX-Dapp",
     description: "Contributed to the decentralized inheritance solution",
     date: "2025",
+    type: "Frontend",
   },
   {
     title: "Gasless Gossip Contract Updates",
@@ -54,6 +60,7 @@ const onlyDustContributions: OnlyDustContribution[] = [
     repository: "songifi/gg_contract",
     description: "Updated smart contracts for gasless transactions",
     date: "2025",
+    type: "Smart Contract",
   },
   {
     title: "Chain Library Contract Improvements",
@@ -62,6 +69,7 @@ const onlyDustContributions: OnlyDustContribution[] = [
     repository: "Chain-Library/chainlib-contract",
     description: "Enhanced contract functionality for the chain library",
     date: "2025",
+    type: "Smart Contract",
   },
   {
     title: "PrediFi Protocol Development",
@@ -70,6 +78,7 @@ const onlyDustContributions: OnlyDustContribution[] = [
     repository: "Web3Novalabs/predifi",
     description: "Contributed to the prediction market protocol",
     date: "2025",
+    type: "Smart Contract",
   },
   {
     title: "TimelyCapsule Web Updates",
@@ -78,6 +87,7 @@ const onlyDustContributions: OnlyDustContribution[] = [
     repository: "enbliq/timelycapsule-web",
     description: "Improved web interface for the time capsule dApp",
     date: "2025",
+    type: "Frontend",
   },
   {
     title: "Admin Dashboard Development",
@@ -87,39 +97,21 @@ const onlyDustContributions: OnlyDustContribution[] = [
     description:
       "Developed admin dashboard for managing the CrowdChain platform",
     date: "2025",
+    type: "Frontend",
   },
 ];
 
 export default function Contributions() {
   return (
     <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8 py-8">
-      <div className="mb-12 max-w-3xl mx-auto p-6 bg-gradient-to-r from-blue-900/30 to-blue-800/20 rounded-xl border border-blue-900/50 backdrop-blur-sm">
-        <div className="flex flex-col items-center text-center gap-4">
-          <div className="flex items-center gap-3">
-           
-            <h2 className="text-3xl font-bold text-white">
-              OnlyDust Ecosystem
-            </h2>
-          </div>
-          <p className="text-gray-300 text-base leading-relaxed">
-            OnlyDust is a platform that connects open-source developers with
-            projects in  Starknet ecosystem. As a contributor, I've had the
-            opportunity to work on various decentralized applications, helping to build the future of web3 through
-            open-source collaboration and innovation. below are some of my contributions
-          </p>
-          <a
-            href="https://www.onlydust.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-2 inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors duration-200"
-          >
-            <span>Explore OnlyDust</span>
-            <ExternalLink className="w-4 h-4" />
-          </a>
-        </div>
+      <div className="mb-12 max-w-4xl mx-auto text-center">
+        <h2 className="text-3xl font-bold text-white mb-4">
+          OnlyDust Ecosystem
+        </h2>
+        <p className="text-gray-300 text-lg leading-relaxed mb-6 mx-auto">
+          I contribute to the <a href="https://www.onlydust.com/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors">OnlyDust</a> platform, connecting open-source developers with projects in the Starknet ecosystem. Through this, I've helped build decentralized applications and shape the future of web3 via open-source collaboration.
+        </p>
       </div>
-
-    
 
       {onlyDustContributions.length === 0 ? (
         <div className="text-center py-12">
