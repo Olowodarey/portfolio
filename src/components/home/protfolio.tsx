@@ -1,12 +1,13 @@
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { ExternalLink, Github, Star } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { ExternalLink, Github, Star } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const projects = [
   {
     title: "VR School Platform",
-    description: "An immersive educational platform built with Next.js and Three.js for virtual learning experiences",
+    description:
+      "An immersive educational platform built with Next.js and Three.js for virtual learning experiences",
     image: "/vr-school-preview.jpg",
     tags: ["Next.js", "Three.js", "Tailwind CSS"],
     liveUrl: "https://vr-sch-oictgg.vercel.app/",
@@ -15,56 +16,58 @@ const projects = [
     stats: { stars: 45, forks: 12 },
   },
   {
-    title: "OnlyDust - Project Management",
-    description: "Advanced project management tools for open-source maintainers",
-    image: "/project-management-interface-with-kanban-board.jpg",
-    tags: ["Next.js", "PostgreSQL", "Prisma"],
-    liveUrl: "#",
+    title: "PMovies - Movie Discovery App",
+    description:
+      "A modern movie discovery platform with search, filtering, and movie details",
+    image: "/pmovies-preview.jpg",
+    tags: ["Next.js", "TMDB API", "Tailwind CSS"],
+    liveUrl: "https://pmovies-two.vercel.app/",
     githubUrl: "#",
     featured: true,
-    stats: { stars: 890, forks: 210 },
+    stats: { stars: 68, forks: 15 },
   },
   {
-    title: "OnlyDust - Analytics Platform",
-    description: "Real-time analytics and insights for developer contributions",
-    image: "/analytics-dashboard-with-graphs-and-data-visualiza.jpg",
-    tags: ["React", "D3.js", "Node.js"],
-    liveUrl: "#",
+    title: "Virtual Aid - Health Assistant",
+    description:
+      "An AI-powered health assistant providing medical information and support",
+    image: "/virtual-aid-preview.jpg",
+    tags: ["Next.js", "AI Integration", "Health Tech"],
+    liveUrl: "https://virtual-aid.vercel.app/",
     githubUrl: "#",
-    featured: false,
-    stats: { stars: 650, forks: 180 },
+    featured: true,
+    stats: { stars: 92, forks: 24 },
   },
   {
-    title: "OnlyDust - Mobile App",
-    description: "Mobile companion app for tracking contributions on the go",
-    image: "/dark-theme-mobile-app.png",
-    tags: ["React Native", "Expo", "TypeScript"],
-    liveUrl: "#",
+    title: "Megastore - E-commerce Platform",
+    description: "A full-featured e-commerce platform with product catalog, cart, and checkout",
+    image: "/megastore-preview.jpg",
+    tags: ["Next.js", "E-commerce", "Payment Integration"],
+    liveUrl: "https://megastore-snowy.vercel.app/",
     githubUrl: "#",
-    featured: false,
-    stats: { stars: 420, forks: 95 },
+    featured: true,
+    stats: { stars: 87, forks: 31 },
   },
   {
-    title: "OnlyDust - API Gateway",
-    description: "Scalable API infrastructure powering the entire platform",
-    image: "/api-documentation-interface.png",
-    tags: ["Node.js", "GraphQL", "Docker"],
-    liveUrl: "#",
+    title: "SaveCircle - Financial Planning",
+    description: "A modern platform for personal finance management and savings goals",
+    image: "/savecircle-preview.jpg",
+    tags: ["React", "Financial Tech", "Dashboard"],
+    liveUrl: "https://savecircle.vercel.app/",
     githubUrl: "#",
-    featured: false,
-    stats: { stars: 780, forks: 160 },
+    featured: true,
+    stats: { stars: 64, forks: 18 },
   },
   {
-    title: "OnlyDust - Admin Panel",
-    description: "Administrative interface for platform management and moderation",
-    image: "/admin-panel-with-user-management-and-settings.jpg",
-    tags: ["Vue.js", "Laravel", "MySQL"],
-    liveUrl: "#",
+    title: "Web3 E-commerce Platform",
+    description: "A decentralized e-commerce platform with cryptocurrency payments",
+    image: "/web3-ecommerce-preview.jpg",
+    tags: ["Web3", "Ethereum", "Next.js"],
+    liveUrl: "https://web3-ecommerce-roan.vercel.app/",
     githubUrl: "#",
-    featured: false,
-    stats: { stars: 320, forks: 75 },
+    featured: true,
+    stats: { stars: 52, forks: 12 },
   },
-]
+];
 
 export function PortfolioSection() {
   return (
@@ -87,9 +90,12 @@ export function PortfolioSection() {
               Recent Work
             </span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">Portfolio</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">
+            Portfolio
+          </h2>
           <p className="text-muted-foreground text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-            Here are some of my recent projects that showcase my skills and experience
+            Here are some of my recent projects that showcase my skills and
+            experience
           </p>
         </div>
 
@@ -102,30 +108,46 @@ export function PortfolioSection() {
               }`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {project.featured && (
-                <div className="absolute top-4 right-4 z-20">
-                  <Badge className="bg-primary text-primary-foreground border-primary/20 animate-pulse-glow">
-                    <Star className="w-3 h-3 mr-1" />
-                    Featured
-                  </Badge>
-                </div>
-              )}
+             
 
               <div className="relative overflow-hidden">
-                <img
-                  src={project.image || "/placeholder.svg?height=300&width=400&query=modern dashboard interface"}
-                  alt={project.title}
-                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
-                />
+                {project.liveUrl !== "#" ? (
+                  <div className="w-full h-48 overflow-hidden relative">
+                    <iframe
+                      src={project.liveUrl}
+                      className="w-full h-full border-0 overflow-hidden"
+                      loading="lazy"
+                      title={`${project.title} Preview`}
+                      sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+                      referrerPolicy="no-referrer"
+                      scrolling="no"
+                      style={{ overflow: "hidden" }}
+                    />
+                    <div className="absolute inset-0 pointer-events-none" />
+                  </div>
+                ) : (
+                  <img
+                    src={
+                      project.image ||
+                      "/placeholder.svg?height=300&width=400&query=modern dashboard interface"
+                    }
+                    alt={project.title}
+                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center gap-3">
                   <Button
                     size="sm"
                     className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg animate-slide-up"
                     asChild
                   >
-                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <ExternalLink className="w-4 h-4 mr-2" />
-                      Live Demo
+                      vist link
                     </a>
                   </Button>
                   <Button
@@ -135,10 +157,7 @@ export function PortfolioSection() {
                     style={{ animationDelay: "0.1s" }}
                     asChild
                   >
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                      <Github className="w-4 h-4 mr-2" />
-                      Code
-                    </a>
+                  
                   </Button>
                 </div>
               </div>
@@ -160,7 +179,9 @@ export function PortfolioSection() {
                   </div>
                 </div>
 
-                <p className="text-muted-foreground text-sm mb-4 leading-relaxed">{project.description}</p>
+                <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+                  {project.description}
+                </p>
 
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag, tagIndex) => (
@@ -190,5 +211,5 @@ export function PortfolioSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

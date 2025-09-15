@@ -4,45 +4,39 @@ import { Code, Smartphone, Palette, Zap } from "lucide-react"
 const services = [
   {
     icon: Code,
-    title: "Web Development",
-    description: "Building modern, responsive web applications with clean design and scalable architecture.",
+    title: "Web3 Smart Contract Development",
+    description: "Write and deploy smart contracts in Solidity & Cairo.",
     features: [
-      "React & Next.js",
-      "Tailwind CSS",
-      "API & Database integration"
+      "Build secure and scalable on-chain logic"
     ],
     gradient: "from-blue-500/20 to-cyan-500/20",
     iconBg: "bg-blue-500/10 group-hover:bg-blue-500/20",
     iconColor: "text-blue-400",
   },
   {
-    icon: Code,
-    title: "Web3 Development",
-    description: "Creating decentralized applications and integrating smart contracts seamlessly with frontend apps.",
+    icon: Smartphone,
+    title: "Frontend Development",
+    description: "Build responsive and modern apps with React, Next.js, and Tailwind CSS.",
     features: [
-      "Solidity & Cairo",
-      "StarkNet & Ethereum",
-      "Smart contract integration with frontend",
-      "DeFi applications"
+      "Deliver clean UI with smooth user experience"
     ],
     gradient: "from-purple-500/20 to-indigo-500/20",
     iconBg: "bg-purple-500/10 group-hover:bg-purple-500/20",
     iconColor: "text-purple-400",
   },
   {
-    icon: Palette,
-    title: "UI/UX Design",
-    description: "Designing intuitive and visually engaging interfaces for seamless user experiences.",
+    icon: Zap,
+    title: "Web3 Integration",
+    description: "Connect smart contracts to frontend apps.",
     features: [
-      "Wireframing & Prototyping",
-      "User-centered design",
-      "Responsive layouts",
-      "Design systems"
+      "Use ethers.js, wagmi, Starknet.js for wallet connection",
+      "Handle on-chain interactions"
     ],
-    gradient: "from-pink-500/20 to-rose-500/20",
-    iconBg: "bg-pink-500/10 group-hover:bg-pink-500/20",
-    iconColor: "text-pink-400",
+    gradient: "from-amber-500/20 to-orange-500/20",
+    iconBg: "bg-amber-500/10 group-hover:bg-amber-500/20",
+    iconColor: "text-amber-400",
   },
+  
   {
     icon: Zap,
     title: "E-Commerce Solutions",
