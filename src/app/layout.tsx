@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: "Darey Olowo",
   description: "Portfolio",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon.jpeg",
   },
 };
 
