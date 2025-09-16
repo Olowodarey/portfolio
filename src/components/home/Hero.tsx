@@ -11,7 +11,7 @@ const fadeInUp = {
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 py-20" >  
+    <section className="relative min-h-screen flex items-center justify-center px-4 py-20">
       {/* Background pattern */}
       <div className="absolute inset-0 -z-10 bg-grid-white/5 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
 
@@ -29,7 +29,9 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <span className="text-sm font-semibold tracking-wider text-primary">HELLO THERE, MY NAME IS</span>
+            <span className="text-sm font-semibold tracking-wider text-primary">
+              HELLO THERE, MY NAME IS
+            </span>
           </motion.div>
 
           {/* Name and Title */}
@@ -40,7 +42,6 @@ export function HeroSection() {
               transition={{ delay: 0.1 }}
             >
               Darey Olowo
-       
             </motion.h1>
 
             <motion.div
@@ -49,19 +50,21 @@ export function HeroSection() {
               transition={{ delay: 0.2 }}
             >
               <p className="text-foreground/90">
-                I'm a frontend software developer with a strong passion
-                for building seamless and responsive web applications. My
-                expertise lies in creating modern, user-friendly interfaces using
-                React, Next.js, and Tailwind CSS.
+                I'm a frontend software developer with a strong passion for
+                building seamless and responsive web applications. My expertise
+                lies in creating modern, user-friendly interfaces using React,
+                Next.js, and Tailwind CSS.
               </p>
               <p className="text-foreground/80">
-                I also work with smart contracts in Solidity and Cairo, integrating
-                blockchain functionality directly into applications. I specialize in
-                connecting decentralized logic with intuitive interfaces.
+                I also work with smart contracts in Solidity and Cairo,
+                integrating blockchain functionality directly into applications.
+                I specialize in connecting decentralized logic with intuitive
+                interfaces.
               </p>
               <p className="text-foreground/70">
-                I've contributed to multiple open source Web3 projects through OnlyDust,
-                collaborating with global teams to ship real-world solutions.
+                I've contributed to multiple open source Web3 projects through
+                OnlyDust, collaborating with global teams to ship real-world
+                solutions.
               </p>
             </motion.div>
           </div>
@@ -74,19 +77,24 @@ export function HeroSection() {
           >
             {[
               {
-                icon: <Github className="w-5 h-5" />,
-                url: "https://github.com/yourusername",
+                icon: (
+                  <Github className="w-5 h-5 " />
+                ),
+                url: "https://github.com/Olowodarey",
                 name: "GitHub",
+                bg: "bg-gray-800 hover:bg-gray-700 dark:bg-white/10 dark:hover:bg-white/20",
               },
               {
-                icon: <Linkedin className="w-5 h-5" />,
+                icon: <Linkedin className="w-5 h-5 text-[#0A66C2]" />,
                 url: "https://linkedin.com/in/yourusername",
                 name: "LinkedIn",
+                bg: "bg-[#0A66C2]/10 hover:bg-[#0A66C2]/20",
               },
               {
-                icon: <Twitter className="w-5 h-5" />,
-                url: "https://twitter.com/yourusername",
+                icon: <Twitter className="w-5 h-5 text-[#1DA1F2]" />,
+                url: "https://x.com/Dareyolowo",
                 name: "Twitter",
+                bg: "bg-[#1DA1F2]/10 hover:bg-[#1DA1F2]/20",
               },
             ].map((social, index) => (
               <Link
@@ -94,15 +102,15 @@ export function HeroSection() {
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 rounded-lg bg-muted hover:bg-muted/80 transition-colors"
+                className={`p-2.5 rounded-lg transition-colors ${
+                  social.bg || "bg-muted hover:bg-muted/80"
+                }`}
                 aria-label={social.name}
               >
                 {social.icon}
               </Link>
             ))}
           </motion.div>
-
-     
 
           {/* CTA Buttons */}
           <motion.div
@@ -111,9 +119,9 @@ export function HeroSection() {
             transition={{ delay: 0.3 }}
           >
             <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
-              <Link href="#projects" className="flex-1 group">
-                <Button 
-                  size="lg" 
+              <Link href="#portfolio" className="flex-1 group">
+                <Button
+                  size="lg"
                   className="w-full h-14 text-base font-medium bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary/80 shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center"
                 >
                   View My Work
@@ -121,9 +129,9 @@ export function HeroSection() {
                 </Button>
               </Link>
               <Link href="#contact" className="flex-1">
-                <Button 
-                  size="lg" 
-                  variant="outline" 
+                <Button
+                  size="lg"
+                  variant="outline"
                   className="w-full h-14 text-base font-medium border-2 border-foreground/20 hover:border-primary/50 hover:bg-foreground/5 transition-all duration-300 transform hover:-translate-y-0.5"
                 >
                   Get In Touch

@@ -86,24 +86,24 @@ export function ServicesSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 px-2 sm:px-0">
           {services.map((service, index) => (
             <Card
               key={index}
-              className={`group relative overflow-hidden h-full flex flex-col transition-all duration-300 hover:shadow-lg border-border/50 hover:border-primary/30`}
+              className={`group relative overflow-hidden h-full flex flex-col transition-all duration-300 hover:shadow-lg border-border/50 hover:border-primary/30 max-w-sm mx-auto w-full`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div
                 className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
               ></div>
 
-              <CardHeader className="relative z-10 p-4 pb-2">
+              <CardHeader className="relative z-10 p-4 pb-2 text-center">
                 <div
-                  className={`w-10 h-10 ${service.iconBg} rounded-lg flex items-center justify-center mb-3 transition-all duration-300 group-hover:scale-105`}
+                  className={`w-10 h-10 ${service.iconBg} rounded-lg flex items-center justify-center mb-3 transition-all duration-300 group-hover:scale-105 mx-auto`}
                 >
                   <service.icon className={`w-5 h-5 ${service.iconColor}`} />
                 </div>
-                <CardTitle className="text-lg font-semibold group-hover:text-primary transition-colors duration-300">
+                <CardTitle className="text-base sm:text-lg font-semibold group-hover:text-primary transition-colors duration-300">
                   {service.title}
                 </CardTitle>
                 <CardDescription className="text-xs text-muted-foreground line-clamp-2">
@@ -111,13 +111,13 @@ export function ServicesSection() {
                 </CardDescription>
               </CardHeader>
               <CardContent className="relative z-10 p-4 pt-0">
-                <ul className="space-y-2">
+                <ul className="space-y-1.5">
                   {service.features.map((feature, featureIndex) => (
                     <li
                       key={featureIndex}
-                      className="flex items-center text-xs text-muted-foreground group-hover:text-foreground transition-colors duration-200"
+                      className="flex items-center justify-center text-xs text-muted-foreground group-hover:text-foreground transition-colors duration-200"
                     >
-                      <div className="w-1.5 h-1.5 bg-primary/80 rounded-full mr-2 group-hover:animate-pulse" />
+                      <div className="w-1.5 h-1.5 bg-primary/80 rounded-full mr-2 group-hover:animate-pulse flex-shrink-0" />
                       <span>{feature}</span>
                     </li>
                   ))}
