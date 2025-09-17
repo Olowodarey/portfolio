@@ -11,7 +11,7 @@ const fadeInUp = {
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 py-20">
+    <section className="relative min-h-screen flex items-center justify-center px-6 py-20">
       {/* Background pattern */}
       <div className="absolute inset-0 -z-10 bg-grid-white/5 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
 
@@ -24,12 +24,12 @@ export function HeroSection() {
         >
           {/* Greeting */}
           <motion.div
-            className="inline-flex items-center justify-center px-6 py-2 rounded-full bg-primary/10 mb-8 border border-primary/20"
+            className="inline-flex items-center justify-center px-6 py-2 sm:py-4 rounded-full bg-primary/10 mb-8 border border-primary/20"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <span className="text-sm font-semibold tracking-wider text-primary">
+            <span className="text-xs lg:text-base font-semibold tracking-wider text-primary">
               HELLO THERE, MY NAME IS
             </span>
           </motion.div>
@@ -45,7 +45,7 @@ export function HeroSection() {
             </motion.h1>
 
             <motion.div
-              className="text-lg text-muted-foreground max-w-3xl leading-relaxed mx-auto space-y-4"
+              className="text-base lg:text-lg  text-muted-foreground max-w-3xl leading-relaxed mx-auto space-y-4"
               variants={fadeInUp}
               transition={{ delay: 0.2 }}
             >
