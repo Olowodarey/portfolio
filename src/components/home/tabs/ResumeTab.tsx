@@ -1,0 +1,95 @@
+"use client";
+
+import type { IconType } from "react-icons";
+import {
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiReact,
+  SiNextdotjs,
+  SiTypescript,
+  SiTailwindcss,
+  SiSolidity,
+  SiEthereum,
+  SiRust,
+  SiGit,
+  SiGithub,
+} from "react-icons/si";
+
+type Skill = { name: string; icon: IconType; color: string };
+type SkillGroup = { category: string; skills: Skill[] };
+
+const skillGroups: SkillGroup[] = [
+  {
+    category: "Frontend",
+    skills: [
+      { name: "HTML", icon: SiHtml5, color: "text-orange-500" },
+      { name: "CSS", icon: SiCss3, color: "text-blue-500" },
+      { name: "JavaScript", icon: SiJavascript, color: "text-yellow-400" },
+      { name: "TypeScript", icon: SiTypescript, color: "text-blue-400" },
+      { name: "React", icon: SiReact, color: "text-cyan-400" },
+      { name: "Next.js", icon: SiNextdotjs, color: "text-foreground" },
+      { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-sky-400" },
+    ],
+  },
+  {
+    category: "Blockchain & Web3",
+    skills: [
+      { name: "Solidity", icon: SiSolidity, color: "text-slate-300" },
+      { name: "Cairo", icon: SiRust, color: "text-orange-400" },
+      { name: "Ethereum", icon: SiEthereum, color: "text-indigo-400" },
+    ],
+  },
+  {
+    category: "Tools",
+    skills: [
+      { name: "Git", icon: SiGit, color: "text-red-500" },
+      { name: "GitHub", icon: SiGithub, color: "text-foreground" },
+    ],
+  },
+];
+
+export function ResumeTab() {
+  return (
+    <div>
+      <div className="relative inline-block">
+        <h2 className="text-2xl font-bold text-foreground md:text-3xl">
+          Skills &amp; Technologies
+        </h2>
+        <span className="mt-2 block h-1 w-12 rounded-full bg-gradient-to-r from-primary to-purple-500" />
+      </div>
+
+      <p className="mt-6 max-w-2xl text-sm leading-relaxed text-muted-foreground md:text-base">
+        I focus on building dynamic, responsive and accessible applications, and
+        I enjoy staying current with the tools shaping modern web and web3
+        development. Here&apos;s the stack I work with day to day.
+      </p>
+
+      <div className="mt-8 space-y-8">
+        {skillGroups.map((group) => (
+          <div key={group.category}>
+            <h3 className="mb-4 flex items-center gap-3 text-sm font-semibold uppercase tracking-wider text-primary">
+              {group.category}
+              <span className="h-px flex-1 bg-border" />
+            </h3>
+            <div className="flex flex-wrap gap-3">
+              {group.skills.map(({ name, icon: Icon, color }) => (
+                <div
+                  key={name}
+                  className="group flex items-center gap-2.5 rounded-xl border border-border bg-background/40 px-4 py-3 transition-all hover:-translate-y-0.5 hover:border-primary/40"
+                >
+                  <Icon
+                    className={`h-5 w-5 ${color} transition-transform group-hover:scale-110`}
+                  />
+                  <span className="text-sm font-medium text-foreground">
+                    {name}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
