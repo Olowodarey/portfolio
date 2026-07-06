@@ -33,14 +33,14 @@ export function PortfolioShell() {
         />
       </div>
 
-      <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-6 lg:flex-row lg:py-10">
+      <div className="mx-auto flex max-w-7xl flex-col gap-6 px-4 py-6 lg:flex-row lg:py-10">
         <Sidebar />
 
         {/* Main content panel */}
-        <main className="relative flex-1 overflow-hidden rounded-2xl border border-border bg-card/60 backdrop-blur-sm">
-          {/* Tab navigation */}
-          <div className="sticky top-0 z-10 flex justify-center overflow-x-auto border-b border-border bg-card/80 px-2 backdrop-blur-md thin-scrollbar sm:justify-end sm:px-4">
-            <nav className="flex gap-1 py-3">
+        <main className="relative flex-1 rounded-2xl border border-border bg-card/60 backdrop-blur-sm">
+          {/* Tab navigation — rounded block notched into the top-right corner */}
+          <div className="sticky top-4 z-20 flex justify-center px-3 sm:justify-end sm:px-0">
+            <nav className="flex gap-1 overflow-x-auto rounded-b-2xl border border-t-0 border-border bg-secondary/70 px-2 py-2 shadow-md backdrop-blur-md thin-scrollbar sm:overflow-visible sm:rounded-b-none sm:rounded-bl-2xl sm:rounded-tr-2xl sm:border-r-0">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
@@ -54,7 +54,7 @@ export function PortfolioShell() {
                   {active === tab.id && (
                     <motion.span
                       layoutId="active-tab"
-                      className="absolute inset-0 rounded-lg bg-primary/10"
+                      className="absolute inset-0 rounded-lg bg-primary/15"
                       transition={{ type: "spring", stiffness: 400, damping: 30 }}
                     />
                   )}
@@ -65,7 +65,7 @@ export function PortfolioShell() {
           </div>
 
           {/* Tab content */}
-          <div className="p-5 sm:p-8">
+          <div className="px-5 pb-8 pt-4 sm:px-8 sm:pb-10 sm:-mt-10">
             <AnimatePresence mode="wait">
               <motion.div
                 key={active}

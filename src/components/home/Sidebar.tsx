@@ -53,7 +53,7 @@ export function Sidebar() {
   const [showContacts, setShowContacts] = useState(false);
 
   return (
-    <aside className="relative overflow-hidden rounded-2xl border border-border bg-card/60 backdrop-blur-sm p-6 lg:sticky lg:top-6 lg:w-[330px] lg:shrink-0">
+    <aside className="relative flex flex-col overflow-hidden rounded-2xl border border-border bg-card/60 backdrop-blur-sm p-6 lg:sticky lg:top-6 lg:min-h-[600px] lg:w-[330px] lg:shrink-0">
       {/* subtle grid backdrop */}
       <div className="pointer-events-none absolute inset-0 -z-10 bg-grid-white/5 opacity-40 [mask-image:radial-gradient(ellipse_at_top,black,transparent_75%)]" />
 
@@ -98,7 +98,11 @@ export function Sidebar() {
       <div className="my-5 hidden h-px bg-border lg:block" />
 
       {/* Contact details */}
-      <div className={`${showContacts ? "block" : "hidden"} lg:block`}>
+      <div
+        className={`${
+          showContacts ? "flex" : "hidden"
+        } flex-col lg:flex lg:flex-1`}
+      >
         <div className="mt-5 space-y-4 lg:mt-0">
           {contacts.map(({ icon: Icon, label, value, href }) => (
             <div key={label} className="flex items-center gap-3">
@@ -126,20 +130,32 @@ export function Sidebar() {
           ))}
         </div>
 
-        {/* Socials */}
-        <div className="mt-6 flex items-center justify-center gap-3">
-          {socials.map(({ icon: Icon, href, label }) => (
-            <Link
-              key={label}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={label}
-              className="flex h-9 w-9 items-center justify-center rounded-lg border border-border text-muted-foreground transition-all hover:-translate-y-0.5 hover:border-primary/50 hover:text-primary"
-            >
-              <Icon className="h-4 w-4" />
-            </Link>
-          ))}
+        {/* Availability + socials pinned to the bottom of the card */}
+        <div className="lg:mt-auto">
+          <div className="mt-6 flex items-center justify-center gap-2.5 rounded-xl border border-border bg-background/40 px-4 py-3">
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
+            </span>
+            <span className="text-xs font-medium text-foreground">
+              Available for work
+            </span>
+          </div>
+
+          <div className="mt-5 flex items-center justify-center gap-3">
+            {socials.map(({ icon: Icon, href, label }) => (
+              <Link
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="flex h-9 w-9 items-center justify-center rounded-lg border border-border text-muted-foreground transition-all hover:-translate-y-0.5 hover:border-primary/50 hover:text-primary"
+              >
+                <Icon className="h-4 w-4" />
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </aside>

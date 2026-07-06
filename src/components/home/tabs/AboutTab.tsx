@@ -1,6 +1,13 @@
 "use client";
 
-import { Code, Smartphone, Zap, ShoppingCart, type LucideIcon } from "lucide-react";
+import {
+  Code,
+  Smartphone,
+  Server,
+  Zap,
+  ShoppingCart,
+  type LucideIcon,
+} from "lucide-react";
 
 type Service = {
   icon: LucideIcon;
@@ -18,6 +25,14 @@ const services: Service[] = [
       "Modern, responsive interfaces built with React, Next.js and Tailwind CSS.",
     iconColor: "text-purple-400",
     iconBg: "bg-purple-500/10",
+  },
+  {
+    icon: Server,
+    title: "Backend Development",
+    description:
+      "REST APIs, authentication and databases built with Node.js and Next.js.",
+    iconColor: "text-rose-400",
+    iconBg: "bg-rose-500/10",
   },
   {
     icon: Code,
