@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rm -rf .next)",
+      "Bash(npm run *)",
+      "mcp__playwright__browser_evaluate",
+      "Bash(cd \"/home/olowo/Desktop/my projects/portfolio\" && rm -f *.png && rm -rf .playwright-mcp && echo cleaned)",
+      "Bash(pkill -9 -f \"next-server\")"
+    ],
+    "additionalDirectories": [
+      "/home/olowo/Desktop/my projects/portfolio"
+    ]
+  }
+}

@@ -53,7 +53,7 @@ export function Sidebar() {
   const [showContacts, setShowContacts] = useState(false);
 
   return (
-    <aside className="relative flex flex-col overflow-hidden rounded-2xl border border-border bg-card/60 backdrop-blur-sm p-6 lg:sticky lg:top-6 lg:min-h-[600px] lg:w-[330px] lg:shrink-0">
+    <aside className="relative flex flex-col overflow-hidden rounded-2xl border border-border bg-card/60 backdrop-blur-sm p-6 lg:sticky lg:top-6 lg:h-full lg:w-[330px] lg:shrink-0">
       {/* subtle grid backdrop */}
       <div className="pointer-events-none absolute inset-0 -z-10 bg-grid-white/5 opacity-40 [mask-image:radial-gradient(ellipse_at_top,black,transparent_75%)]" />
 
