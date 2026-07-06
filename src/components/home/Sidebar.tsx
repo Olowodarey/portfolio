@@ -34,19 +34,51 @@ const contacts = [
 ];
 
 const socials = [
-  { icon: FaGithub, href: "https://github.com/Olowodarey", label: "GitHub" },
+  {
+    icon: FaGithub,
+    href: "https://github.com/Olowodarey",
+    label: "GitHub",
+    color: "text-foreground",
+    bg: "bg-foreground/10",
+    hoverBg: "hover:bg-foreground",
+    hoverText: "hover:text-background",
+  },
   {
     icon: FaLinkedinIn,
     href: "https://www.linkedin.com/in/darey-olowo-213859169/",
     label: "LinkedIn",
+    color: "text-[#0A66C2]",
+    bg: "bg-[#0A66C2]/15",
+    hoverBg: "hover:bg-[#0A66C2]",
+    hoverText: "hover:text-white",
   },
-  { icon: FaXTwitter, href: "https://x.com/Dareyolowo", label: "Twitter" },
+  {
+    icon: FaXTwitter,
+    href: "https://x.com/Dareyolowo",
+    label: "Twitter",
+    color: "text-foreground",
+    bg: "bg-foreground/10",
+    hoverBg: "hover:bg-foreground",
+    hoverText: "hover:text-background",
+  },
   {
     icon: FaWhatsapp,
     href: "https://wa.me/2348142293610",
     label: "WhatsApp",
+    color: "text-[#25D366]",
+    bg: "bg-[#25D366]/15",
+    hoverBg: "hover:bg-[#25D366]",
+    hoverText: "hover:text-white",
   },
-  { icon: FaTelegram, href: "https://t.me/Darey56", label: "Telegram" },
+  {
+    icon: FaTelegram,
+    href: "https://t.me/Darey56",
+    label: "Telegram",
+    color: "text-[#0088CC]",
+    bg: "bg-[#0088CC]/15",
+    hoverBg: "hover:bg-[#0088CC]",
+    hoverText: "hover:text-white",
+  },
 ];
 
 export function Sidebar() {
@@ -103,9 +135,12 @@ export function Sidebar() {
           showContacts ? "flex" : "hidden"
         } flex-col lg:flex lg:flex-1`}
       >
-        <div className="mt-5 space-y-4 lg:mt-0">
+        <div className="mt-5 flex flex-1 flex-col justify-center gap-5 lg:mt-0 lg:gap-6">
           {contacts.map(({ icon: Icon, label, value, href }) => (
-            <div key={label} className="flex items-center gap-3">
+            <div
+              key={label}
+              className="flex items-center gap-3 rounded-xl border border-border bg-background/40 p-4"
+            >
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-border bg-primary/5 text-primary">
                 <Icon className="h-4 w-4" />
               </div>
@@ -143,14 +178,14 @@ export function Sidebar() {
           </div>
 
           <div className="mt-5 flex items-center justify-center gap-3">
-            {socials.map(({ icon: Icon, href, label }) => (
+            {socials.map(({ icon: Icon, href, label, color, bg, hoverBg, hoverText }) => (
               <Link
                 key={label}
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="flex h-9 w-9 items-center justify-center rounded-lg border border-border text-muted-foreground transition-all hover:-translate-y-0.5 hover:border-primary/50 hover:text-primary"
+                className={`flex h-9 w-9 items-center justify-center rounded-lg border border-border transition-all hover:-translate-y-0.5 hover:border-transparent ${color} ${bg} ${hoverBg} ${hoverText}`}
               >
                 <Icon className="h-4 w-4" />
               </Link>
