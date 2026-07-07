@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { Mail, Phone, MapPin, ChevronDown } from "lucide-react";
@@ -103,7 +104,7 @@ export function Sidebar() {
         </div>
 
         <div className="lg:mt-4">
-          <h1 className="text-lg font-bold text-foreground lg:text-xl">
+          <h1 className="font-heading text-lg font-bold text-foreground lg:text-xl">
             Darey Olowo
           </h1>
           <span className="mt-2 inline-block rounded-md bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
@@ -139,7 +140,7 @@ export function Sidebar() {
           {contacts.map(({ icon: Icon, label, value, href }) => (
             <div
               key={label}
-              className="flex items-center gap-3 rounded-xl border border-border bg-background/40 p-4"
+              className="flex items-center gap-3 rounded-xl border border-border bg-foreground/5 p-4"
             >
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-border bg-primary/5 text-primary">
                 <Icon className="h-4 w-4" />
@@ -167,7 +168,18 @@ export function Sidebar() {
 
         {/* Availability + socials pinned to the bottom of the card */}
         <div className="lg:mt-auto">
-          <div className="mt-6 flex items-center justify-center gap-2.5 rounded-xl border border-border bg-background/40 px-4 py-3">
+          <motion.div
+            animate={{
+              opacity: [0.75, 1, 0.75],
+              boxShadow: [
+                "0 0 0px rgba(16,185,129,0)",
+                "0 0 14px rgba(16,185,129,0.25)",
+                "0 0 0px rgba(16,185,129,0)",
+              ],
+            }}
+            transition={{ duration: 2.8, repeat: Infinity, ease: "easeInOut" }}
+            className="mt-6 flex items-center justify-center gap-2.5 rounded-xl border border-border bg-foreground/5 px-4 py-3"
+          >
             <span className="relative flex h-2.5 w-2.5">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
               <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
@@ -175,7 +187,7 @@ export function Sidebar() {
             <span className="text-xs font-medium text-foreground">
               Available for work
             </span>
-          </div>
+          </motion.div>
 
           <div className="mt-5 flex items-center justify-center gap-3">
             {socials.map(({ icon: Icon, href, label, color, bg, hoverBg, hoverText }) => (

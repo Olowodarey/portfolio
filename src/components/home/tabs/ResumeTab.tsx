@@ -1,6 +1,8 @@
 "use client";
 
-import type { IconType } from "react-icons";
+import type { ComponentType } from "react";
+import { Workflow } from "lucide-react";
+import { SectionHeading } from "./AboutTab";
 import {
   SiHtml5,
   SiCss3,
@@ -12,11 +14,15 @@ import {
   SiSolidity,
   SiEthereum,
   SiRust,
+  SiStellar,
+  SiSolana,
+  SiNodedotjs,
+  SiNestjs,
   SiGit,
   SiGithub,
 } from "react-icons/si";
 
-type Skill = { name: string; icon: IconType; color: string };
+type Skill = { name: string; icon: ComponentType<{ className?: string }>; color: string };
 type SkillGroup = { category: string; skills: Skill[] };
 
 const skillGroups: SkillGroup[] = [
@@ -33,11 +39,26 @@ const skillGroups: SkillGroup[] = [
     ],
   },
   {
+    category: "Backend",
+    skills: [
+      { name: "Node.js", icon: SiNodedotjs, color: "text-green-500" },
+      { name: "NestJS", icon: SiNestjs, color: "text-rose-500" },
+    ],
+  },
+  {
     category: "Blockchain & Web3",
     skills: [
       { name: "Solidity", icon: SiSolidity, color: "text-slate-300" },
       { name: "Cairo", icon: SiRust, color: "text-orange-400" },
       { name: "Ethereum", icon: SiEthereum, color: "text-indigo-400" },
+      { name: "Stellar", icon: SiStellar, color: "text-purple-300" },
+      { name: "Solana", icon: SiSolana, color: "text-fuchsia-400" },
+    ],
+  },
+  {
+    category: "Enterprise & Automation",
+    skills: [
+      { name: "Microsoft Power Platform", icon: Workflow, color: "text-blue-400" },
     ],
   },
   {
@@ -52,12 +73,7 @@ const skillGroups: SkillGroup[] = [
 export function ResumeTab() {
   return (
     <div>
-      <div className="relative inline-block">
-        <h2 className="text-2xl font-bold text-foreground md:text-3xl">
-          Skills &amp; Technologies
-        </h2>
-        <span className="mt-2 block h-1 w-12 rounded-full bg-gradient-to-r from-primary to-purple-500" />
-      </div>
+      <SectionHeading title="Skills & Technologies" />
 
       <p className="mt-6 max-w-2xl text-sm leading-relaxed text-muted-foreground md:text-base">
         I focus on building dynamic, responsive and accessible applications, and
@@ -68,7 +84,7 @@ export function ResumeTab() {
       <div className="mt-8 space-y-8">
         {skillGroups.map((group) => (
           <div key={group.category}>
-            <h3 className="mb-4 flex items-center gap-3 text-sm font-semibold uppercase tracking-wider text-primary">
+            <h3 className="font-heading mb-4 flex items-center gap-3 text-sm font-semibold uppercase tracking-wider text-primary">
               {group.category}
               <span className="h-px flex-1 bg-border" />
             </h3>
@@ -76,7 +92,7 @@ export function ResumeTab() {
               {group.skills.map(({ name, icon: Icon, color }) => (
                 <div
                   key={name}
-                  className="group flex items-center gap-2.5 rounded-xl border border-border bg-background/40 px-4 py-3 transition-all hover:-translate-y-0.5 hover:border-primary/40"
+                  className="group flex items-center gap-2.5 rounded-xl border border-border bg-foreground/5 px-4 py-3 transition-all hover:-translate-y-0.5 hover:border-primary/40"
                 >
                   <Icon
                     className={`h-5 w-5 ${color} transition-transform group-hover:scale-110`}

@@ -17,10 +17,36 @@ const tabs = [
 
 type TabId = (typeof tabs)[number]["id"];
 
+const tabOrder = tabs.map((t) => t.id);
+
+const slideVariants = {
+  enter: (direction: number) => ({
+    opacity: 0,
+    x: direction >= 0 ? 48 : -48,
+  }),
+  center: {
+    opacity: 1,
+    x: 0,
+  },
+  exit: (direction: number) => ({
+    opacity: 0,
+    x: direction >= 0 ? -48 : 48,
+  }),
+};
+
 export function PortfolioShell() {
   const [active, setActive] = useState<TabId>("about");
+  const [direction, setDirection] = useState(0);
   const ActiveComponent =
     tabs.find((t) => t.id === active)?.Component ?? AboutTab;
+
+  const handleTabChange = (id: TabId) => {
+    if (id === active) return;
+    const newIndex = tabOrder.indexOf(id);
+    const oldIndex = tabOrder.indexOf(active);
+    setDirection(newIndex > oldIndex ? 1 : -1);
+    setActive(id);
+  };
 
   return (
     <div className="relative min-h-screen">
@@ -44,7 +70,7 @@ export function PortfolioShell() {
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
-                  onClick={() => setActive(tab.id)}
+                  onClick={() => handleTabChange(tab.id)}
                   className={`relative whitespace-nowrap rounded-lg px-4 py-2 text-sm font-medium transition-colors ${
                     active === tab.id
                       ? "text-primary"
@@ -66,13 +92,15 @@ export function PortfolioShell() {
 
           {/* Tab content — scrolls internally so the panel height never changes between tabs */}
           <div className="thin-scrollbar flex-1 overflow-y-auto px-5 pb-8 pt-16 sm:px-8 sm:pb-10 sm:pt-20">
-            <AnimatePresence mode="wait">
+            <AnimatePresence mode="wait" custom={direction}>
               <motion.div
                 key={active}
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -12 }}
-                transition={{ duration: 0.25 }}
+                custom={direction}
+                variants={slideVariants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={{ duration: 0.3, ease: "easeOut" }}
               >
                 <ActiveComponent />
               </motion.div>

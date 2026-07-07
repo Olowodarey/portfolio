@@ -65,14 +65,14 @@ export function ContactTab() {
             <Link
               key={label}
               href={href}
-              className="flex items-center gap-3 rounded-xl border border-border bg-background/40 p-4 transition-colors hover:border-primary/40"
+              className="flex items-center gap-3 rounded-xl border border-border bg-foreground/5 p-4 transition-colors hover:border-primary/40"
             >
               {inner}
             </Link>
           ) : (
             <div
               key={label}
-              className="flex items-center gap-3 rounded-xl border border-border bg-background/40 p-4"
+              className="flex items-center gap-3 rounded-xl border border-border bg-foreground/5 p-4"
             >
               {inner}
             </div>
@@ -89,7 +89,7 @@ export function ContactTab() {
             value={name}
             onChange={(e) => setName(e.target.value)}
             placeholder="Full name"
-            className="w-full rounded-lg border border-border bg-background/40 px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary/60"
+            className="w-full rounded-lg border border-border bg-foreground/5 px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary/60"
           />
           <input
             type="email"
@@ -97,7 +97,7 @@ export function ContactTab() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Email address"
-            className="w-full rounded-lg border border-border bg-background/40 px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary/60"
+            className="w-full rounded-lg border border-border bg-foreground/5 px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary/60"
           />
         </div>
         <textarea
@@ -106,7 +106,7 @@ export function ContactTab() {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           placeholder="Your message"
-          className="w-full resize-none rounded-lg border border-border bg-background/40 px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary/60"
+          className="w-full resize-none rounded-lg border border-border bg-foreground/5 px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary/60"
         />
         <button
           type="submit"

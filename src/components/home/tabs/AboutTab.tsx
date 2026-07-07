@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import {
   Code,
   Smartphone,
@@ -67,31 +68,35 @@ export function AboutTab() {
 
       <div className="mt-6 space-y-4 text-sm leading-relaxed text-muted-foreground md:text-base">
         <p>
-          I&apos;m a frontend software developer with a strong passion for
-          building seamless and responsive web applications. My expertise lies
-          in creating modern, user-friendly interfaces using React, Next.js and
-          Tailwind CSS.
+          I&apos;m a software engineer working across full-stack development,
+          blockchain, and zero-knowledge systems — building secure,
+          user-focused applications that solve real problems.
         </p>
         <p>
-          I also work with smart contracts in Solidity and Cairo, integrating
-          blockchain functionality directly into applications. I specialize in
-          connecting decentralized logic with intuitive interfaces.
+          On the frontend I build with React, Next.js and TypeScript. On the
+          backend I work with Node.js, and I develop Soroban smart contracts on
+          Stellar alongside Solidity and Cairo contracts for Ethereum and
+          Starknet — including privacy-preserving apps powered by
+          zero-knowledge proofs.
         </p>
         <p>
-          I&apos;ve collaborated with global teams across the Starknet ecosystem
-          to ship real-world, production-grade solutions.
+          I also build enterprise solutions with the Microsoft Power Platform,
+          helping teams automate workflows and ship internal tools faster.
+          Whether it&apos;s a Web3 protocol or an internal business tool, I care
+          about clean architecture and building things people actually want to
+          use.
         </p>
       </div>
 
       {/* What I'm Doing */}
-      <h3 className="mt-10 text-lg font-semibold text-foreground">
+      <h3 className="font-heading mt-10 text-lg font-semibold text-foreground">
         What I&apos;m Doing
       </h3>
       <div className="mt-5 grid gap-4 sm:grid-cols-2">
         {services.map(({ icon: Icon, title, description, iconColor, iconBg }) => (
           <div
             key={title}
-            className="group flex gap-4 rounded-xl border border-border bg-background/40 p-5 transition-colors hover:border-primary/30"
+            className="group flex gap-4 rounded-xl border border-border bg-foreground/5 p-5 transition-colors hover:border-primary/30"
           >
             <div
               className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-lg ${iconBg} ${iconColor} transition-transform group-hover:scale-105`}
@@ -99,7 +104,7 @@ export function AboutTab() {
               <Icon className="h-5 w-5" />
             </div>
             <div>
-              <h4 className="font-semibold text-foreground">{title}</h4>
+              <h4 className="font-heading font-semibold text-foreground">{title}</h4>
               <p className="mt-1 text-sm text-muted-foreground">{description}</p>
             </div>
           </div>
@@ -112,8 +117,23 @@ export function AboutTab() {
 export function SectionHeading({ title }: { title: string }) {
   return (
     <div className="relative inline-block">
-      <h2 className="text-2xl font-bold text-foreground md:text-3xl">{title}</h2>
-      <span className="mt-2 block h-1 w-12 rounded-full bg-gradient-to-r from-primary to-purple-500" />
+      <motion.h2
+        key={title}
+        initial={{ opacity: 0, x: -18 }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: 18 }}
+        transition={{ duration: 0.35, ease: "easeOut" }}
+        className="font-heading text-2xl font-bold text-foreground md:text-3xl"
+      >
+        {title}
+      </motion.h2>
+      <motion.span
+        key={`${title}-underline`}
+        initial={{ width: 0 }}
+        animate={{ width: "3rem" }}
+        transition={{ duration: 0.5, delay: 0.15, ease: "easeOut" }}
+        className="mt-2 block h-1 rounded-full bg-gradient-to-r from-primary to-purple-500"
+      />
     </div>
   );
 }

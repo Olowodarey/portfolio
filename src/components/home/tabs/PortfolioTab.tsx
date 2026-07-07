@@ -194,7 +194,7 @@ export function PortfolioTab() {
           <button
             key={project.title}
             onClick={() => setSelected(project)}
-            className="group relative flex flex-col overflow-hidden rounded-xl border border-border bg-background/40 text-left transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5"
+            className="group relative flex flex-col overflow-hidden rounded-xl border border-border bg-foreground/5 text-left transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5"
           >
             {/* Preview */}
             <div className="relative h-40 w-full overflow-hidden border-b border-border bg-muted/20">
@@ -235,7 +235,7 @@ export function PortfolioTab() {
                   {project.title.charAt(0)}
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground transition-colors group-hover:text-primary">
+                  <h3 className="font-heading font-semibold text-foreground transition-colors group-hover:text-primary">
                     {project.title}
                   </h3>
                   <p className="text-[11px] text-muted-foreground">
@@ -292,7 +292,7 @@ export function PortfolioTab() {
               <span className="text-xs font-medium text-primary">
                 {selected.categoryLabel}
               </span>
-              <h3 className="mt-1 text-xl font-bold text-foreground">
+              <h3 className="font-heading mt-1 text-xl font-bold text-foreground">
                 {selected.title}
               </h3>
 
