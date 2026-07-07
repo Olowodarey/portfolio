@@ -1,8 +1,16 @@
 "use client";
 
 import type { ComponentType } from "react";
+import { motion } from "framer-motion";
 import { Workflow } from "lucide-react";
 import { SectionHeading } from "./AboutTab";
+import {
+  fadeInDown,
+  fadeInUp,
+  staggerContainer,
+  staggerItem,
+  viewportOnce,
+} from "@/lib/motion";
 import {
   SiHtml5,
   SiCss3,
@@ -75,23 +83,42 @@ export function ResumeTab() {
     <div>
       <SectionHeading title="Skills & Technologies" />
 
-      <p className="mt-6 max-w-2xl text-sm leading-relaxed text-muted-foreground md:text-base">
+      <motion.p
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewportOnce}
+        variants={fadeInUp}
+        className="mt-6 max-w-2xl text-sm leading-relaxed text-muted-foreground md:text-base"
+      >
         I focus on building dynamic, responsive and accessible applications, and
         I enjoy staying current with the tools shaping modern web and web3
         development. Here&apos;s the stack I work with day to day.
-      </p>
+      </motion.p>
 
       <div className="mt-8 space-y-8">
         {skillGroups.map((group) => (
           <div key={group.category}>
-            <h3 className="font-heading mb-4 flex items-center gap-3 text-sm font-semibold uppercase tracking-wider text-primary">
+            <motion.h3
+              initial="hidden"
+              whileInView="visible"
+              viewport={viewportOnce}
+              variants={fadeInDown}
+              className="font-heading mb-4 flex items-center gap-3 text-sm font-semibold uppercase tracking-wider text-primary"
+            >
               {group.category}
               <span className="h-px flex-1 bg-border" />
-            </h3>
-            <div className="flex flex-wrap gap-3">
+            </motion.h3>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={viewportOnce}
+              variants={staggerContainer}
+              className="flex flex-wrap gap-3"
+            >
               {group.skills.map(({ name, icon: Icon, color }) => (
-                <div
+                <motion.div
                   key={name}
+                  variants={staggerItem}
                   className="group flex items-center gap-2.5 rounded-xl border border-border bg-foreground/5 px-4 py-3 transition-all hover:-translate-y-0.5 hover:border-primary/40"
                 >
                   <Icon
@@ -100,9 +127,9 @@ export function ResumeTab() {
                   <span className="text-sm font-medium text-foreground">
                     {name}
                   </span>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
         ))}
       </div>

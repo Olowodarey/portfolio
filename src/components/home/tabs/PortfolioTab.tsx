@@ -5,6 +5,13 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Eye, ExternalLink, Github, X } from "lucide-react";
 import Link from "next/link";
 import { SectionHeading } from "./AboutTab";
+import {
+  alternateSlide,
+  fadeInUp,
+  staggerContainer,
+  staggerItem,
+  viewportOnce,
+} from "@/lib/motion";
 
 type Category = "web3" | "webapp" | "ecommerce";
 
@@ -160,10 +167,16 @@ export function PortfolioTab() {
     <div>
       <SectionHeading title="Portfolio" />
 
-      <p className="mt-6 text-sm leading-relaxed text-muted-foreground md:text-base">
+      <motion.p
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewportOnce}
+        variants={fadeInUp}
+        className="mt-6 text-sm leading-relaxed text-muted-foreground md:text-base"
+      >
         A selection of recent projects. Hover a card and click the eye icon to
         see details before opening the live site.
-      </p>
+      </motion.p>
 
       {/* Category filters */}
       <div className="mt-6 flex flex-wrap items-center gap-1 border-b border-border pb-3">
@@ -189,15 +202,25 @@ export function PortfolioTab() {
         ))}
       </div>
 
-      <div className="mt-6 grid gap-5 sm:grid-cols-2">
-        {filtered.map((project) => (
-          <button
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewportOnce}
+        variants={staggerContainer}
+        className="mt-6 grid gap-5 sm:grid-cols-2"
+      >
+        {filtered.map((project, index) => (
+          <motion.button
             key={project.title}
+            variants={staggerItem}
             onClick={() => setSelected(project)}
             className="group relative flex flex-col overflow-hidden rounded-xl border border-border bg-foreground/5 text-left transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5"
           >
             {/* Preview */}
-            <div className="relative h-40 w-full overflow-hidden border-b border-border bg-muted/20">
+            <motion.div
+              variants={alternateSlide(index)}
+              className="relative h-40 w-full overflow-hidden border-b border-border bg-muted/20"
+            >
               {project.liveUrl && !project.noEmbed ? (
                 <iframe
                   src={project.liveUrl}
@@ -226,7 +249,7 @@ export function PortfolioTab() {
                   View Details
                 </span>
               </div>
-            </div>
+            </motion.div>
 
             {/* Body */}
             <div className="flex flex-1 flex-col p-4">
@@ -259,9 +282,9 @@ export function PortfolioTab() {
                 ))}
               </div>
             </div>
-          </button>
+          </motion.button>
         ))}
-      </div>
+      </motion.div>
 
       {/* Details modal */}
       <AnimatePresence>

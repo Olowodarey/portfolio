@@ -12,6 +12,7 @@ import {
   FaWhatsapp,
   FaTelegram,
 } from "react-icons/fa6";
+import { slideInLeft } from "@/lib/motion";
 
 const contacts = [
   {
@@ -86,13 +87,23 @@ export function Sidebar() {
   const [showContacts, setShowContacts] = useState(false);
 
   return (
-    <aside className="relative flex flex-col overflow-hidden rounded-2xl border border-border bg-card/60 backdrop-blur-sm p-6 lg:sticky lg:top-6 lg:h-full lg:w-[330px] lg:shrink-0">
+    <motion.aside
+      initial={{ opacity: 0, y: -16 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="relative flex flex-col overflow-hidden rounded-2xl border border-border bg-card/60 backdrop-blur-sm p-6 lg:sticky lg:top-6 lg:h-full lg:w-[330px] lg:shrink-0"
+    >
       {/* subtle grid backdrop */}
       <div className="pointer-events-none absolute inset-0 -z-10 bg-grid-white/5 opacity-40 [mask-image:radial-gradient(ellipse_at_top,black,transparent_75%)]" />
 
       {/* Header: avatar + name */}
       <div className="flex items-center gap-4 lg:flex-col lg:text-center">
-        <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-2xl border border-primary/30 bg-primary/10 lg:h-28 lg:w-28">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={slideInLeft}
+          className="relative h-20 w-20 shrink-0 overflow-hidden rounded-2xl border border-primary/30 bg-primary/10 lg:h-28 lg:w-28"
+        >
           <Image
             src="/profilepic.jpeg"
             alt="Darey Olowo"
@@ -101,7 +112,7 @@ export function Sidebar() {
             className="object-cover"
             priority
           />
-        </div>
+        </motion.div>
 
         <div className="lg:mt-4">
           <h1 className="font-heading text-lg font-bold text-foreground lg:text-xl">
@@ -205,6 +216,6 @@ export function Sidebar() {
           </div>
         </div>
       </div>
-    </aside>
+    </motion.aside>
   );
 }

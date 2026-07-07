@@ -9,6 +9,13 @@ import {
   ShoppingCart,
   type LucideIcon,
 } from "lucide-react";
+import {
+  fadeInDown,
+  fadeInUp,
+  staggerContainer,
+  staggerItem,
+  viewportOnce,
+} from "@/lib/motion";
 
 type Service = {
   icon: LucideIcon;
@@ -66,36 +73,55 @@ export function AboutTab() {
     <div>
       <SectionHeading title="About Me" />
 
-      <div className="mt-6 space-y-4 text-sm leading-relaxed text-muted-foreground md:text-base">
-        <p>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewportOnce}
+        variants={staggerContainer}
+        className="mt-6 space-y-4 text-sm leading-relaxed text-muted-foreground md:text-base"
+      >
+        <motion.p variants={fadeInUp}>
           I&apos;m a software engineer working across full-stack development,
           blockchain, and zero-knowledge systems — building secure,
           user-focused applications that solve real problems.
-        </p>
-        <p>
+        </motion.p>
+        <motion.p variants={fadeInUp}>
           On the frontend I build with React, Next.js and TypeScript. On the
           backend I work with Node.js, and I develop Soroban smart contracts on
           Stellar alongside Solidity and Cairo contracts for Ethereum and
           Starknet — including privacy-preserving apps powered by
           zero-knowledge proofs.
-        </p>
-        <p>
+        </motion.p>
+        <motion.p variants={fadeInUp}>
           I also build enterprise solutions with the Microsoft Power Platform,
           helping teams automate workflows and ship internal tools faster.
           Whether it&apos;s a Web3 protocol or an internal business tool, I care
           about clean architecture and building things people actually want to
           use.
-        </p>
-      </div>
+        </motion.p>
+      </motion.div>
 
       {/* What I'm Doing */}
-      <h3 className="font-heading mt-10 text-lg font-semibold text-foreground">
+      <motion.h3
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewportOnce}
+        variants={fadeInDown}
+        className="font-heading mt-10 text-lg font-semibold text-foreground"
+      >
         What I&apos;m Doing
-      </h3>
-      <div className="mt-5 grid gap-4 sm:grid-cols-2">
+      </motion.h3>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewportOnce}
+        variants={staggerContainer}
+        className="mt-5 grid gap-4 sm:grid-cols-2"
+      >
         {services.map(({ icon: Icon, title, description, iconColor, iconBg }) => (
-          <div
+          <motion.div
             key={title}
+            variants={staggerItem}
             className="group flex gap-4 rounded-xl border border-border bg-foreground/5 p-5 transition-colors hover:border-primary/30"
           >
             <div
@@ -107,9 +133,9 @@ export function AboutTab() {
               <h4 className="font-heading font-semibold text-foreground">{title}</h4>
               <p className="mt-1 text-sm text-muted-foreground">{description}</p>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }

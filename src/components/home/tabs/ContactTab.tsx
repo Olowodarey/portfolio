@@ -1,9 +1,17 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import Link from "next/link";
 import { SectionHeading } from "./AboutTab";
+import {
+  fadeInUp,
+  scaleIn,
+  staggerContainer,
+  staggerItem,
+  viewportOnce,
+} from "@/lib/motion";
 
 const details = [
   {
@@ -39,12 +47,24 @@ export function ContactTab() {
     <div>
       <SectionHeading title="Contact" />
 
-      <p className="mt-6 text-sm leading-relaxed text-muted-foreground md:text-base">
+      <motion.p
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewportOnce}
+        variants={fadeInUp}
+        className="mt-6 text-sm leading-relaxed text-muted-foreground md:text-base"
+      >
         Ready to start your project? Reach out directly or drop a message below.
-      </p>
+      </motion.p>
 
       {/* Contact details */}
-      <div className="mt-8 grid gap-4 sm:grid-cols-3">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewportOnce}
+        variants={staggerContainer}
+        className="mt-8 grid gap-4 sm:grid-cols-3"
+      >
         {details.map(({ icon: Icon, label, value, href }) => {
           const inner = (
             <>
@@ -62,23 +82,25 @@ export function ContactTab() {
             </>
           );
           return href ? (
-            <Link
-              key={label}
-              href={href}
-              className="flex items-center gap-3 rounded-xl border border-border bg-foreground/5 p-4 transition-colors hover:border-primary/40"
-            >
-              {inner}
-            </Link>
+            <motion.div key={label} variants={staggerItem}>
+              <Link
+                href={href}
+                className="flex items-center gap-3 rounded-xl border border-border bg-foreground/5 p-4 transition-colors hover:border-primary/40"
+              >
+                {inner}
+              </Link>
+            </motion.div>
           ) : (
-            <div
+            <motion.div
               key={label}
+              variants={staggerItem}
               className="flex items-center gap-3 rounded-xl border border-border bg-foreground/5 p-4"
             >
               {inner}
-            </div>
+            </motion.div>
           );
         })}
-      </div>
+      </motion.div>
 
       {/* Message form */}
       <form onSubmit={handleSubmit} className="mt-8 space-y-4">
@@ -108,13 +130,17 @@ export function ContactTab() {
           placeholder="Your message"
           className="w-full resize-none rounded-lg border border-border bg-foreground/5 px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary/60"
         />
-        <button
+        <motion.button
           type="submit"
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportOnce}
+          variants={scaleIn}
           className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-primary to-purple-500 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-primary/20 transition-all hover:-translate-y-0.5 hover:shadow-primary/30"
         >
           <Send className="h-4 w-4" />
           Send Message
-        </button>
+        </motion.button>
       </form>
     </div>
   );
