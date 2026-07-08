@@ -13,6 +13,7 @@ import {
   FaTelegram,
 } from "react-icons/fa6";
 import { slideInLeft } from "@/lib/motion";
+import { AvailableBadge } from "./AvailableBadge";
 
 const contacts = [
   {
@@ -179,40 +180,23 @@ export function Sidebar() {
 
         {/* Availability + socials pinned to the bottom of the card */}
         <div className="lg:mt-auto">
-          <motion.div
-            animate={{
-              opacity: [0.75, 1, 0.75],
-              boxShadow: [
-                "0 0 0px rgba(16,185,129,0)",
-                "0 0 14px rgba(16,185,129,0.25)",
-                "0 0 0px rgba(16,185,129,0)",
-              ],
-            }}
-            transition={{ duration: 2.8, repeat: Infinity, ease: "easeInOut" }}
-            className="mt-6 flex items-center justify-center gap-2.5 rounded-xl border border-border bg-foreground/5 px-4 py-3"
-          >
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
-            </span>
-            <span className="text-xs font-medium text-foreground">
-              Available for work
-            </span>
-          </motion.div>
+          <AvailableBadge />
 
           <div className="mt-5 flex items-center justify-center gap-3">
-            {socials.map(({ icon: Icon, href, label, color, bg, hoverBg, hoverText }) => (
-              <Link
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={label}
-                className={`flex h-9 w-9 items-center justify-center rounded-lg border border-border transition-all hover:-translate-y-0.5 hover:border-transparent ${color} ${bg} ${hoverBg} ${hoverText}`}
-              >
-                <Icon className="h-4 w-4" />
-              </Link>
-            ))}
+            {socials.map(
+              ({ icon: Icon, href, label, color, bg, hoverBg, hoverText }) => (
+                <Link
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className={`flex h-9 w-9 items-center justify-center rounded-lg border border-border transition-all hover:-translate-y-0.5 hover:border-transparent ${color} ${bg} ${hoverBg} ${hoverText}`}
+                >
+                  <Icon className="h-4 w-4" />
+                </Link>
+              ),
+            )}
           </div>
         </div>
       </div>
