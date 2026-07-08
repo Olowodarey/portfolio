@@ -19,6 +19,9 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://dareyolowo.vercel.app",
+  ),
   title: "Darey Olowo — Frontend & Web3 Developer",
   description:
     "Portfolio of Darey Olowo, a frontend and web3 developer building modern, responsive web applications with React, Next.js, Tailwind CSS and smart contracts in Solidity and Cairo.",
