@@ -105,7 +105,7 @@ export function Sidebar() {
           className="relative h-20 w-20 shrink-0 overflow-hidden rounded-2xl border border-primary/30 bg-primary/10 lg:h-28 lg:w-28"
         >
           <Image
-            src="/profilepic.jpeg"
+            src="/olowoDp.png"
             alt="Darey Olowo"
             fill
             sizes="112px"
