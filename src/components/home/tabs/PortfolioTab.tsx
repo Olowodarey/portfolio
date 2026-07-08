@@ -140,9 +140,7 @@ const projects: Project[] = [
 ];
 
 export function PortfolioTab() {
-  const [activeCategory, setActiveCategory] = useState<"all" | Category>(
-    "all"
-  );
+  const [activeCategory, setActiveCategory] = useState<"all" | Category>("all");
   const [selected, setSelected] = useState<Project | null>(null);
 
   const filtered =
@@ -232,8 +230,8 @@ export function PortfolioTab() {
                   tabIndex={-1}
                 />
               ) : (
-                <div className="flex h-full w-full flex-col items-center justify-center gap-2 bg-gradient-to-br from-primary/10 to-purple-500/10">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-purple-500 text-lg font-semibold text-white">
+                <div className="flex h-full w-full flex-col items-center justify-center gap-2 bg-gradient-to-br from-primary/10 to-blue-500/10">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-blue-500 text-lg font-semibold text-white">
                     {project.title.charAt(0)}
                   </div>
                   <span className="text-[11px] text-muted-foreground">
@@ -254,7 +252,7 @@ export function PortfolioTab() {
             {/* Body */}
             <div className="flex flex-1 flex-col p-4">
               <div className="flex items-center gap-3">
-                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-purple-500 text-sm font-semibold text-white">
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-blue-500 text-sm font-semibold text-white">
                   {project.title.charAt(0)}
                 </div>
                 <div>
@@ -340,7 +338,7 @@ export function PortfolioTab() {
                     href={selected.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-primary to-purple-500 px-4 py-2.5 text-sm font-medium text-white shadow-lg shadow-primary/20 transition-transform hover:-translate-y-0.5"
+                    className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-primary to-blue-500 px-4 py-2.5 text-sm font-medium text-white shadow-lg shadow-primary/20 transition-transform hover:-translate-y-0.5"
                   >
                     <ExternalLink className="h-4 w-4" />
                     Visit Live Site

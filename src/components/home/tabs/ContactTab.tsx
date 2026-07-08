@@ -38,7 +38,7 @@ export function ContactTab() {
     e.preventDefault();
     const subject = encodeURIComponent(`Portfolio enquiry from ${name}`);
     const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\n\n${message}`
+      `Name: ${name}\nEmail: ${email}\n\n${message}`,
     );
     window.location.href = `mailto:Olowodarey@gmail.com?subject=${subject}&body=${body}`;
   };
@@ -136,7 +136,7 @@ export function ContactTab() {
           whileInView="visible"
           viewport={viewportOnce}
           variants={scaleIn}
-          className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-primary to-purple-500 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-primary/20 transition-all hover:-translate-y-0.5 hover:shadow-primary/30"
+          className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-primary to-blue-500 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-primary/20 transition-all hover:-translate-y-0.5 hover:shadow-primary/30"
         >
           <Send className="h-4 w-4" />
           Send Message
