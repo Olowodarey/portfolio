@@ -10,8 +10,8 @@ import { ContactTab } from "./tabs/ContactTab";
 
 const tabs = [
   { id: "about", label: "About", Component: AboutTab },
-  { id: "resume", label: "Resume", Component: ResumeTab },
   { id: "portfolio", label: "Portfolio", Component: PortfolioTab },
+  { id: "resume", label: "Resume", Component: ResumeTab },
   { id: "contact", label: "Contact", Component: ContactTab },
 ] as const;
 
