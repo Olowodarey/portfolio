@@ -36,36 +36,19 @@ const categories: { id: "all" | Category; label: string }[] = [
 ];
 
 const projects: Project[] = [
-  {
-    title: "VR School Platform",
-    category: "webapp",
-    categoryLabel: "Web App",
-    description: "Immersive educational platform.",
-    detail:
-      "An immersive virtual-reality education platform that introduces students and institutions to VR/AR learning tools, with content on how VR is reshaping classrooms.",
-    tags: ["React", "JS", "Tailwind"],
-    liveUrl: "https://vr-sch-oictgg.vercel.app/",
-  },
+
   {
     title: "PMovies",
     category: "webapp",
     categoryLabel: "Web App",
-    description: "Discover and explore movies with search and filtering.",
+    description: "Discover, search and stream movies and TV shows.",
     detail:
-      "A movie discovery app built on the TMDB API, with search, filtering and browsing for trending and popular titles.",
-    tags: ["Next.js", "TMDB API", "Tailwind"],
-    liveUrl: "https://pmovies-two.vercel.app/",
+      "A movie and TV discovery hub powered by the TMDB API. Browse trending, popular and top-rated titles, filter by genre, search across the full catalog, and open full details — cast, ratings, trailers and similar recommendations — for every title. Built with the Next.js App Router for fast, cached pages and a responsive UI that works from phone to desktop.",
+    tags: ["Next.js", "TMDB API", "Tailwind", "TypeScript"],
+    liveUrl: "https://pmovies-hub.vercel.app/",
+    sourceUrl: "https://github.com/Olowodarey/pmovies",
   },
-  {
-    title: "Virtual Aid",
-    category: "webapp",
-    categoryLabel: "Web App",
-    description: "AI-powered health assistant for medical information.",
-    detail:
-      "An AI-powered assistant that answers medical and health questions, aimed at giving users quick, reliable guidance on symptoms and general health information.",
-    tags: ["Next.js", "AI", "Health"],
-    liveUrl: "https://virtual-aid.vercel.app/",
-  },
+
   {
     title: "Megastore",
     category: "ecommerce",
@@ -75,6 +58,7 @@ const projects: Project[] = [
       "A full online store with product catalog, cart and checkout flow, built to handle real-world retail purchase journeys end to end.",
     tags: ["Next.js", "E-commerce", "Payments"],
     liveUrl: "https://megastore-snowy.vercel.app/",
+    sourceUrl: "https://github.com/Olowodarey/megastore",
   },
   {
     title: "SaveCircle",
@@ -86,16 +70,20 @@ const projects: Project[] = [
     tags: ["React", "Finance", "Web3"],
     liveUrl: "https://savecircle.vercel.app/",
   },
-  {
-    title: "Web3 E-commerce",
+
+    {
+    title: "DegenHub — Solana Wallet Tracker",
     category: "web3",
     categoryLabel: "Web3",
-    description: "Decentralized store with crypto payments.",
+    description: "Real-time Solana wallet tracker with AI-powered insights.",
     detail:
-      "A storefront that accepts crypto payments directly, connecting wallet-based checkout to a familiar e-commerce browsing experience.",
-    tags: ["Web3", "Ethereum", "Next.js"],
-    liveUrl: "https://web3-ecommerce-roan.vercel.app/",
+      "DegenHub is a Solana wallet-tracking dashboard for traders and degens. Paste any wallet address to watch swaps, transfers and token activity in real time, get AI-assisted summaries of what a wallet is actually doing on-chain, and follow multiple wallets side-by-side — no more tab-switching between block explorers. Built for people who copy-trade smart-money wallets and need signal, not raw transaction noise.",
+    tags: ["Solana", "AI", "Next.js", "TypeScript"],
+    liveUrl: "https://degenhub.vercel.app/",
+    sourceUrl: "https://github.com/DegenbotTr/Solanawallettracker-",
+    noEmbed: true,
   },
+
   {
     title: "Zava",
     category: "web3",
@@ -105,6 +93,7 @@ const projects: Project[] = [
       "A privacy-first credit platform for freelancers and gig workers. Borrowers get a private USDC wallet on Stellar with automated savings tracking, and zero-knowledge proofs (UltraHonk on Stellar Protocol 26) generate a cryptographic credit score — proving financial discipline without exposing raw transaction data or requiring traditional KYC.",
     tags: ["Stellar", "Zero-Knowledge", "Fintech"],
     liveUrl: "https://zava-eta.vercel.app/",
+    sourceUrl: "https://github.com/Zavapa/Zava",
   },
   {
     title: "FarmLink",
@@ -115,6 +104,7 @@ const projects: Project[] = [
       "A field sales console for agricultural sales teams: Gmail-based sign-in, GPS-enabled mobile capture, offline data collection for areas with poor connectivity, and manager-facing reporting and analytics.",
     tags: ["Next.js", "GPS", "Offline-first"],
     liveUrl: "https://farmlink-virid.vercel.app/",
+    sourceUrl: "https://github.com/Olowodarey/Farmlink",
   },
   {
     title: "Gigipay",
@@ -127,15 +117,31 @@ const projects: Project[] = [
     liveUrl: "https://gigipay-app.vercel.app/",
     noEmbed: true,
   },
-  {
-    title: "Solana Wallet Tracker",
-    category: "web3",
-    categoryLabel: "Web3",
-    description: "AI bot for tracking Solana wallet activity.",
+
+
+
+    {
+    title: "VR School Platform",
+    category: "webapp",
+    categoryLabel: "Web App",
+    description: "Immersive educational platform.",
     detail:
-      "An AI-driven bot that monitors Solana wallets and surfaces on-chain activity in real time — built for traders who want automated visibility into wallet movements without manually watching a block explorer.",
-    tags: ["Solana", "AI", "TypeScript"],
-    sourceUrl: "https://github.com/DegenbotTr/Solanawallettracker-",
+      "An immersive virtual-reality education platform that introduces students and institutions to VR/AR learning tools, with content on how VR is reshaping classrooms.",
+    tags: ["React", "JS", "Tailwind"],
+    liveUrl: "https://vr-sch-oictgg.vercel.app/",
+  },
+
+
+    {
+    title: "Virtual Aid",
+    category: "webapp",
+    categoryLabel: "Web App",
+    description: "AI-powered health assistant for medical information.",
+    detail:
+      "An AI-powered assistant that answers medical and health questions, aimed at giving users quick, reliable guidance on symptoms and general health information.",
+    tags: ["Next.js", "AI", "Health"],
+    liveUrl: "https://virtual-aid.vercel.app/",
+    sourceUrl: "https://github.com/Olowodarey/VR-light",
   },
 ];
 
@@ -291,16 +297,17 @@ export function PortfolioTab() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm"
+            className="fixed inset-0 z-50 overflow-y-auto overscroll-contain bg-black/70 backdrop-blur-sm"
             onClick={() => setSelected(null)}
           >
+            <div className="flex min-h-full items-end justify-center p-3 sm:items-center sm:p-4">
             <motion.div
               initial={{ opacity: 0, y: 16, scale: 0.98 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 16, scale: 0.98 }}
               transition={{ duration: 0.2 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-lg rounded-2xl border border-border bg-card p-6 shadow-xl"
+              className="relative w-full max-w-lg rounded-2xl border border-border bg-card p-5 shadow-xl sm:p-6"
             >
               <button
                 onClick={() => setSelected(null)}
@@ -352,11 +359,12 @@ export function PortfolioTab() {
                     className="inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-primary/40 hover:bg-muted/20"
                   >
                     <Github className="h-4 w-4" />
-                    View Source
+                    Code
                   </Link>
                 )}
               </div>
             </motion.div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
