@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { Eye, ExternalLink, Github, X } from "lucide-react";
 import Link from "next/link";
@@ -148,11 +149,16 @@ const projects: Project[] = [
 export function PortfolioTab() {
   const [activeCategory, setActiveCategory] = useState<"all" | Category>("all");
   const [selected, setSelected] = useState<Project | null>(null);
+  const [mounted, setMounted] = useState(false);
 
   const filtered =
     activeCategory === "all"
       ? projects
       : projects.filter((p) => p.category === activeCategory);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     if (!selected) return;
@@ -290,25 +296,28 @@ export function PortfolioTab() {
         ))}
       </motion.div>
 
-      {/* Details modal */}
-      <AnimatePresence>
-        {selected && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 overflow-y-auto overscroll-contain bg-black/70 backdrop-blur-sm"
-            onClick={() => setSelected(null)}
-          >
-            <div className="flex min-h-full items-end justify-center p-3 sm:items-center sm:p-4">
-            <motion.div
-              initial={{ opacity: 0, y: 16, scale: 0.98 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 16, scale: 0.98 }}
-              transition={{ duration: 0.2 }}
-              onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-lg rounded-2xl border border-border bg-card p-5 shadow-xl sm:p-6"
-            >
+      {/* Details modal — portaled to document.body so it isn't trapped inside the
+          animated tab container (transforms on ancestors break position: fixed). */}
+      {mounted &&
+        createPortal(
+          <AnimatePresence>
+            {selected && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="fixed inset-0 z-[100] overflow-y-auto overscroll-contain bg-black/70 backdrop-blur-sm"
+                onClick={() => setSelected(null)}
+              >
+                <div className="flex min-h-full items-end justify-center p-3 sm:items-center sm:p-4">
+                  <motion.div
+                    initial={{ opacity: 0, y: 16, scale: 0.98 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 16, scale: 0.98 }}
+                    transition={{ duration: 0.2 }}
+                    onClick={(e) => e.stopPropagation()}
+                    className="relative w-full max-w-lg rounded-2xl border border-border bg-card p-5 shadow-xl sm:p-6"
+                  >
               <button
                 onClick={() => setSelected(null)}
                 aria-label="Close"
@@ -363,11 +372,13 @@ export function PortfolioTab() {
                   </Link>
                 )}
               </div>
-            </motion.div>
-            </div>
-          </motion.div>
+                  </motion.div>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>,
+          document.body,
         )}
-      </AnimatePresence>
     </div>
   );
 }
