@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { Eye, ExternalLink, Github, X } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { SectionHeading } from "./AboutTab";
 import {
@@ -25,8 +26,8 @@ interface Project {
   tags: string[];
   liveUrl?: string;
   sourceUrl?: string;
-  /** Site blocks iframe embedding (X-Frame-Options) — fall back to a static tile. */
-  noEmbed?: boolean;
+  /** Static screenshot in /public. Falls back to a gradient tile if omitted. */
+  image?: string;
 }
 
 const categories: { id: "all" | Category; label: string }[] = [
@@ -48,6 +49,7 @@ const projects: Project[] = [
     tags: ["Next.js", "TMDB API", "Tailwind", "TypeScript"],
     liveUrl: "https://pmovies-hub.vercel.app/",
     sourceUrl: "https://github.com/Olowodarey/pmovies",
+    image: "/projects/pmovies.png",
   },
 
   {
@@ -60,6 +62,7 @@ const projects: Project[] = [
     tags: ["Next.js", "E-commerce", "Payments"],
     liveUrl: "https://megastore-snowy.vercel.app/",
     sourceUrl: "https://github.com/Olowodarey/megastore",
+    image: "/projects/megastore.png",
   },
   {
     title: "SaveCircle",
@@ -70,6 +73,7 @@ const projects: Project[] = [
       "A decentralized savings and personal-finance dashboard that lets users track and manage group or individual savings circles on-chain.",
     tags: ["React", "Finance", "Web3"],
     liveUrl: "https://savecircle.vercel.app/",
+    image: "/projects/savecircle.png",
   },
 
     {
@@ -82,7 +86,7 @@ const projects: Project[] = [
     tags: ["Solana", "AI", "Next.js", "TypeScript"],
     liveUrl: "https://degenhub.vercel.app/",
     sourceUrl: "https://github.com/DegenbotTr/Solanawallettracker-",
-    noEmbed: true,
+    image: "/projects/degenhub.png",
   },
 
   {
@@ -95,6 +99,7 @@ const projects: Project[] = [
     tags: ["Stellar", "Zero-Knowledge", "Fintech"],
     liveUrl: "https://zava-eta.vercel.app/",
     sourceUrl: "https://github.com/Zavapa/Zava",
+    image: "/projects/zava.png",
   },
   {
     title: "FarmLink",
@@ -106,6 +111,7 @@ const projects: Project[] = [
     tags: ["Next.js", "GPS", "Offline-first"],
     liveUrl: "https://farmlink-virid.vercel.app/",
     sourceUrl: "https://github.com/Olowodarey/Farmlink",
+    image: "/projects/farmlink.png",
   },
   {
     title: "Gigipay",
@@ -116,7 +122,7 @@ const projects: Project[] = [
       "A blockchain payments app that removes the wallet-setup barrier: senders share a claim-code voucher, recipients redeem it with a Gmail login into an auto-generated embedded wallet. Supports batch payments, airtime top-ups for Nigerian carriers, and multiple assets (CELO, cUSD, USDC, ETH) settled on Celo and Base.",
     tags: ["Celo", "Base", "Payments"],
     liveUrl: "https://gigipay-app.vercel.app/",
-    noEmbed: true,
+    image: "/projects/gigipay.png",
   },
 
 
@@ -130,6 +136,7 @@ const projects: Project[] = [
       "An immersive virtual-reality education platform that introduces students and institutions to VR/AR learning tools, with content on how VR is reshaping classrooms.",
     tags: ["React", "JS", "Tailwind"],
     liveUrl: "https://vr-sch-oictgg.vercel.app/",
+    image: "/projects/vr-school.png",
   },
 
 
@@ -143,6 +150,7 @@ const projects: Project[] = [
     tags: ["Next.js", "AI", "Health"],
     liveUrl: "https://virtual-aid.vercel.app/",
     sourceUrl: "https://github.com/Olowodarey/VR-light",
+    image: "/projects/virtual-aid.png",
   },
 ];
 
@@ -231,15 +239,13 @@ export function PortfolioTab() {
               variants={alternateSlide(index)}
               className="relative h-40 w-full overflow-hidden border-b border-border bg-muted/20"
             >
-              {project.liveUrl && !project.noEmbed ? (
-                <iframe
-                  src={project.liveUrl}
-                  className="pointer-events-none h-[200%] w-[200%] origin-top-left scale-50 border-0"
-                  loading="lazy"
-                  title={`${project.title} preview`}
-                  sandbox="allow-same-origin allow-scripts"
-                  referrerPolicy="no-referrer"
-                  tabIndex={-1}
+              {project.image ? (
+                <Image
+                  src={project.image}
+                  alt={`${project.title} screenshot`}
+                  fill
+                  sizes="(min-width: 640px) 50vw, 100vw"
+                  className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
                 />
               ) : (
                 <div className="flex h-full w-full flex-col items-center justify-center gap-2 bg-gradient-to-br from-primary/10 to-blue-500/10">

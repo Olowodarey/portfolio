@@ -1,0 +1,6 @@
+[    2787ms] [LOG] 🚀 Starting background groups preload... @ https://savecircle.vercel.app/_next/static/chunks/app/layout-baeb4de5d184dc17.js:0
+[    2789ms] [LOG] Wallet connection status: {isConnected: undefined, address: undefined, walletType: Wallet} @ https://savecircle.vercel.app/_next/static/chunks/955-ddc7bf6ca8b5ecf2.js:0
+[    2844ms] [LOG] 🚀 Starting background groups preload... @ https://savecircle.vercel.app/_next/static/chunks/app/layout-baeb4de5d184dc17.js:0
+[    2844ms] [LOG] Wallet connection status: {isConnected: false, address: undefined, walletType: Wallet} @ https://savecircle.vercel.app/_next/static/chunks/955-ddc7bf6ca8b5ecf2.js:0
+[    3844ms] [LOG] 📦 Preloading groups data... @ https://savecircle.vercel.app/_next/static/chunks/app/layout-baeb4de5d184dc17.js:0
+[    5719ms] [LOG] ✅ Preloaded 4 groups in 1874ms @ https://savecircle.vercel.app/_next/static/chunks/app/layout-baeb4de5d184dc17.js:0

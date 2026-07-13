@@ -1,0 +1,368 @@
+- generic [active] [ref=f7e1]:
+  - banner [ref=f7e2]:
+    - generic [ref=f7e5]:
+      - paragraph [ref=f7e6]: Welcome to worldwide Megamart!
+      - generic [ref=f7e7]:
+        - generic [ref=f7e8]: Worldwide Delivery
+        - link "Track your order" [ref=f7e13] [cursor=pointer]:
+          - /url: /account/orders
+    - generic [ref=f7e19]:
+      - link [ref=f7e20] [cursor=pointer]:
+        - /url: /
+        - img "MegaMart" [ref=f7e21]
+      - generic [ref=f7e23]:
+        - textbox "Search products..." [ref=f7e27]
+        - button "Search" [ref=f7e28] [cursor=pointer]
+      - generic [ref=f7e29]:
+        - link "Sign In / Sign Up" [ref=f7e30] [cursor=pointer]:
+          - /url: /login
+        - link "Cart, 0 items" [ref=f7e36] [cursor=pointer]:
+          - /url: /cart
+          - button [ref=f7e37]
+    - navigation [ref=f7e44]:
+      - button "All Category" [ref=f7e45] [cursor=pointer]
+      - link "Track Order" [ref=f7e46] [cursor=pointer]:
+        - /url: /account/orders
+      - link "Electronics" [ref=f7e47] [cursor=pointer]:
+        - /url: /category/Electronics
+      - link "Smartphones" [ref=f7e48] [cursor=pointer]:
+        - /url: /category/Smartphones
+      - link "Furniture" [ref=f7e49] [cursor=pointer]:
+        - /url: /category/Furniture
+      - link "Shoes" [ref=f7e50] [cursor=pointer]:
+        - /url: /category/Shoes
+      - link "Miscellaneous" [ref=f7e51] [cursor=pointer]:
+        - /url: /category/Miscellaneous
+  - main [ref=f7e52]:
+    - generic [ref=f7e53]:
+      - generic [ref=f7e55]:
+        - generic [ref=f7e254]:
+          - generic [ref=f7e255]:
+            - generic [ref=f7e256]: Electronics
+            - heading "Sleek Wireless Headphone & Inked Earbud Set" [level=1] [ref=f7e257]
+            - generic [ref=f7e258]:
+              - generic [ref=f7e259]: $44
+              - generic [ref=f7e260]: $58
+              - generic [ref=f7e261]: 24% OFF
+            - generic [ref=f7e262]:
+              - link "Shop Now →" [ref=f7e263] [cursor=pointer]:
+                - /url: /products/19
+              - generic [ref=f7e264]: ★ 4.7
+          - img "Sleek Wireless Headphone & Inked Earbud Set" [ref=f7e274]
+        - button [ref=f7e275] [cursor=pointer]
+        - button [ref=f7e278] [cursor=pointer]
+        - generic [ref=f7e281]:
+          - button [ref=f7e282] [cursor=pointer]
+          - button [ref=f7e283] [cursor=pointer]
+          - button [ref=f7e284] [cursor=pointer]
+          - button [ref=f7e285] [cursor=pointer]
+          - button [ref=f7e286] [cursor=pointer]
+      - generic [ref=f7e56]:
+        - generic [ref=f7e57]:
+          - generic [ref=f7e58]:
+            - heading "Grab the best deal on Electronics" [level=2] [ref=f7e59]
+            - link "View All" [ref=f7e60] [cursor=pointer]:
+              - /url: /category/Electronics
+          - generic [ref=f7e63]:
+            - link "13% OFF iPhone 5s iPhone 5s $199.99 $229.64 ★ 2.8" [ref=f7e287] [cursor=pointer]:
+              - /url: /products/5121
+              - generic [ref=f7e288]:
+                - generic [ref=f7e289]: 13% OFF
+                - img "iPhone 5s" [ref=f7e291]
+                - generic [ref=f7e292]:
+                  - heading "iPhone 5s" [level=3] [ref=f7e293]
+                  - generic [ref=f7e294]:
+                    - generic [ref=f7e295]: $199.99
+                    - generic [ref=f7e296]: $229.64
+                  - generic [ref=f7e297]:
+                    - generic [ref=f7e298]: ★
+                    - generic [ref=f7e299]: "2.8"
+            - link "7% OFF iPhone 6 iPhone 6 $299.99 $321.50 ★ 3.4" [ref=f7e300] [cursor=pointer]:
+              - /url: /products/5122
+              - generic [ref=f7e301]:
+                - generic [ref=f7e302]: 7% OFF
+                - img "iPhone 6" [ref=f7e304]
+                - generic [ref=f7e305]:
+                  - heading "iPhone 6" [level=3] [ref=f7e306]
+                  - generic [ref=f7e307]:
+                    - generic [ref=f7e308]: $299.99
+                    - generic [ref=f7e309]: $321.50
+                  - generic [ref=f7e310]:
+                    - generic [ref=f7e311]: ★
+                    - generic [ref=f7e312]: "3.4"
+            - link "9% OFF iPhone 13 Pro iPhone 13 Pro $1099.99 $1213.72 ★ 4.1" [ref=f7e313] [cursor=pointer]:
+              - /url: /products/5123
+              - generic [ref=f7e314]:
+                - generic [ref=f7e315]: 9% OFF
+                - img "iPhone 13 Pro" [ref=f7e317]
+                - generic [ref=f7e318]:
+                  - heading "iPhone 13 Pro" [level=3] [ref=f7e319]
+                  - generic [ref=f7e320]:
+                    - generic [ref=f7e321]: $1099.99
+                    - generic [ref=f7e322]: $1213.72
+                  - generic [ref=f7e323]:
+                    - generic [ref=f7e324]: ★
+                    - generic [ref=f7e325]: "4.1"
+            - link "20% OFF iPhone X iPhone X $899.99 $1119.25 ★ 2.5" [ref=f7e326] [cursor=pointer]:
+              - /url: /products/5124
+              - generic [ref=f7e327]:
+                - generic [ref=f7e328]: 20% OFF
+                - img "iPhone X" [ref=f7e330]
+                - generic [ref=f7e331]:
+                  - heading "iPhone X" [level=3] [ref=f7e332]
+                  - generic [ref=f7e333]:
+                    - generic [ref=f7e334]: $899.99
+                    - generic [ref=f7e335]: $1119.25
+                  - generic [ref=f7e336]:
+                    - generic [ref=f7e337]: ★
+                    - generic [ref=f7e338]: "2.5"
+            - link "2% OFF Oppo A57 Oppo A57 $249.99 $256.22 ★ 3.9" [ref=f7e339] [cursor=pointer]:
+              - /url: /products/5125
+              - generic [ref=f7e340]:
+                - generic [ref=f7e341]: 2% OFF
+                - img "Oppo A57" [ref=f7e343]
+                - generic [ref=f7e344]:
+                  - heading "Oppo A57" [level=3] [ref=f7e345]
+                  - generic [ref=f7e346]:
+                    - generic [ref=f7e347]: $249.99
+                    - generic [ref=f7e348]: $256.22
+                  - generic [ref=f7e349]:
+                    - generic [ref=f7e350]: ★
+                    - generic [ref=f7e351]: "3.9"
+        - generic [ref=f7e69]:
+          - generic [ref=f7e70]:
+            - heading "Shop From Top Categories" [level=2] [ref=f7e71]
+            - link "View All" [ref=f7e72] [cursor=pointer]:
+              - /url: /categories
+          - generic [ref=f7e75]:
+            - link [ref=f7e76] [cursor=pointer]:
+              - /url: /category/Smartphones
+              - paragraph [ref=f7e81]: Smartphones
+            - link [ref=f7e82] [cursor=pointer]:
+              - /url: /category/Electronics
+              - paragraph [ref=f7e88]: Electronics
+            - link [ref=f7e89] [cursor=pointer]:
+              - /url: /category/Furniture
+              - paragraph [ref=f7e95]: Furniture
+            - link [ref=f7e96] [cursor=pointer]:
+              - /url: /category/Shoes
+              - paragraph [ref=f7e102]: Shoes
+            - link [ref=f7e103] [cursor=pointer]:
+              - /url: /category/Miscellaneous
+              - paragraph [ref=f7e110]: Miscellaneous
+        - generic [ref=f7e111]:
+          - generic [ref=f7e112]:
+            - heading "Featured Electronics" [level=2] [ref=f7e113]
+            - link "View All" [ref=f7e114] [cursor=pointer]:
+              - /url: /category/Electronics
+          - generic [ref=f7e117]:
+            - link "24% OFF Sleek Wireless Headphone & Inked Earbud Set ★ 4.7 $44 Sleek Wireless Headphone & Inked Earbud Set" [ref=f7e352] [cursor=pointer]:
+              - /url: /products/19
+              - generic [ref=f7e353]:
+                - generic [ref=f7e357]:
+                  - generic [ref=f7e358]:
+                    - generic [ref=f7e359]: 24% OFF
+                    - paragraph [ref=f7e360]: Sleek Wireless Headphone & Inked Earbud Set
+                  - generic [ref=f7e361]:
+                    - paragraph [ref=f7e362]: ★ 4.7
+                    - paragraph [ref=f7e363]: $44
+                - img "Sleek Wireless Headphone & Inked Earbud Set" [ref=f7e367]
+            - link "26% OFF Sleek Modern Laptop with Ambient Lighting ★ 4.7 $43 Sleek Modern Laptop with Ambient Lighting" [ref=f7e368] [cursor=pointer]:
+              - /url: /products/23
+              - generic [ref=f7e369]:
+                - generic [ref=f7e373]:
+                  - generic [ref=f7e374]:
+                    - generic [ref=f7e375]: 26% OFF
+                    - paragraph [ref=f7e376]: Sleek Modern Laptop with Ambient Lighting
+                  - generic [ref=f7e377]:
+                    - paragraph [ref=f7e378]: ★ 4.7
+                    - paragraph [ref=f7e379]: $43
+                - img "Sleek Modern Laptop with Ambient Lighting" [ref=f7e383]
+            - link "38% OFF Stylish Red & Silver Over-Ear Headphones ★ 4.3 $39 Stylish Red & Silver Over-Ear Headphones" [ref=f7e384] [cursor=pointer]:
+              - /url: /products/25
+              - generic [ref=f7e385]:
+                - generic [ref=f7e389]:
+                  - generic [ref=f7e390]:
+                    - generic [ref=f7e391]: 38% OFF
+                    - paragraph [ref=f7e392]: Stylish Red & Silver Over-Ear Headphones
+                  - generic [ref=f7e393]:
+                    - paragraph [ref=f7e394]: ★ 4.3
+                    - paragraph [ref=f7e395]: $39
+                - img "Stylish Red & Silver Over-Ear Headphones" [ref=f7e399]
+        - generic [ref=f7e121]:
+          - generic [ref=f7e122]:
+            - heading "Top Footwear Picks" [level=2] [ref=f7e123]
+            - link "View All" [ref=f7e124] [cursor=pointer]:
+              - /url: /category/Shoes
+          - generic [ref=f7e127]:
+            - link "28% OFF Futuristic Holographic Soccer Cleats Futuristic Holographic Soccer Cleats $39 $53.98 ★ 4.6" [ref=f7e400] [cursor=pointer]:
+              - /url: /products/35
+              - generic [ref=f7e401]:
+                - generic [ref=f7e402]: 28% OFF
+                - img "Futuristic Holographic Soccer Cleats" [ref=f7e404]
+                - generic [ref=f7e405]:
+                  - heading "Futuristic Holographic Soccer Cleats" [level=3] [ref=f7e406]
+                  - generic [ref=f7e407]:
+                    - generic [ref=f7e408]: $39
+                    - generic [ref=f7e409]: $53.98
+                  - generic [ref=f7e410]:
+                    - generic [ref=f7e411]: ★
+                    - generic [ref=f7e412]: "4.6"
+            - link "36% OFF Rainbow Glitter High Heels Rainbow Glitter High Heels $39 $60.61 ★ 4.5" [ref=f7e413] [cursor=pointer]:
+              - /url: /products/36
+              - generic [ref=f7e414]:
+                - generic [ref=f7e415]: 36% OFF
+                - img "Rainbow Glitter High Heels" [ref=f7e417]
+                - generic [ref=f7e418]:
+                  - heading "Rainbow Glitter High Heels" [level=3] [ref=f7e419]
+                  - generic [ref=f7e420]:
+                    - generic [ref=f7e421]: $39
+                    - generic [ref=f7e422]: $60.61
+                  - generic [ref=f7e423]:
+                    - generic [ref=f7e424]: ★
+                    - generic [ref=f7e425]: "4.5"
+            - link "31% OFF Chic Summer Denim Espadrille Sandals Chic Summer Denim Espadrille Sandals $33 $47.63 ★ 4.2" [ref=f7e426] [cursor=pointer]:
+              - /url: /products/37
+              - generic [ref=f7e427]:
+                - generic [ref=f7e428]: 31% OFF
+                - img "Chic Summer Denim Espadrille Sandals" [ref=f7e430]
+                - generic [ref=f7e431]:
+                  - heading "Chic Summer Denim Espadrille Sandals" [level=3] [ref=f7e432]
+                  - generic [ref=f7e433]:
+                    - generic [ref=f7e434]: $33
+                    - generic [ref=f7e435]: $47.63
+                  - generic [ref=f7e436]:
+                    - generic [ref=f7e437]: ★
+                    - generic [ref=f7e438]: "4.2"
+            - 'link "13% OFF Vibrant Runners: Bold Orange & Blue Sneakers Vibrant Runners: Bold Orange & Blue Sneakers $27 $31.03 ★ 3.9" [ref=f7e439] [cursor=pointer]':
+              - /url: /products/38
+              - generic [ref=f7e440]:
+                - generic [ref=f7e441]: 13% OFF
+                - 'img "Vibrant Runners: Bold Orange & Blue Sneakers" [ref=f7e443]'
+                - generic [ref=f7e444]:
+                  - 'heading "Vibrant Runners: Bold Orange & Blue Sneakers" [level=3] [ref=f7e445]'
+                  - generic [ref=f7e446]:
+                    - generic [ref=f7e447]: $27
+                    - generic [ref=f7e448]: $31.03
+                  - generic [ref=f7e449]:
+                    - generic [ref=f7e450]: ★
+                    - generic [ref=f7e451]: "3.9"
+            - link "13% OFF Vibrant Pink Classic Sneakers Vibrant Pink Classic Sneakers $84 $96.72 ★ 4.9" [ref=f7e452] [cursor=pointer]:
+              - /url: /products/39
+              - generic [ref=f7e453]:
+                - generic [ref=f7e454]: 13% OFF
+                - img "Vibrant Pink Classic Sneakers" [ref=f7e456]
+                - generic [ref=f7e457]:
+                  - heading "Vibrant Pink Classic Sneakers" [level=3] [ref=f7e458]
+                  - generic [ref=f7e459]:
+                    - generic [ref=f7e460]: $84
+                    - generic [ref=f7e461]: $96.72
+                  - generic [ref=f7e462]:
+                    - generic [ref=f7e463]: ★
+                    - generic [ref=f7e464]: "4.9"
+            - link "14% OFF Futuristic Silver and Gold High-Top Sneaker Futuristic Silver and Gold High-Top Sneaker $68 $78.76 ★ 3.4" [ref=f7e465] [cursor=pointer]:
+              - /url: /products/40
+              - generic [ref=f7e466]:
+                - generic [ref=f7e467]: 14% OFF
+                - img "Futuristic Silver and Gold High-Top Sneaker" [ref=f7e469]
+                - generic [ref=f7e470]:
+                  - heading "Futuristic Silver and Gold High-Top Sneaker" [level=3] [ref=f7e471]
+                  - generic [ref=f7e472]:
+                    - generic [ref=f7e473]: $68
+                    - generic [ref=f7e474]: $78.76
+                  - generic [ref=f7e475]:
+                    - generic [ref=f7e476]: ★
+                    - generic [ref=f7e477]: "3.4"
+  - contentinfo [ref=f7e134]:
+    - generic [ref=f7e136]:
+      - generic [ref=f7e137]:
+        - paragraph [ref=f7e138]: Stay in the loop
+        - paragraph [ref=f7e139]: Get the latest deals delivered to your inbox.
+      - generic [ref=f7e140]:
+        - textbox "Enter your email" [ref=f7e141]
+        - button "Subscribe" [ref=f7e142] [cursor=pointer]
+    - generic [ref=f7e146]:
+      - generic [ref=f7e147]:
+        - link [ref=f7e148] [cursor=pointer]:
+          - /url: /
+          - img "MegaMart" [ref=f7e149]
+        - paragraph [ref=f7e150]: Your one-stop destination for the best deals on electronics, fashion, furniture and more — delivered worldwide.
+        - list [ref=f7e151]:
+          - listitem [ref=f7e152]:
+            - link "08142293610" [ref=f7e156] [cursor=pointer]:
+              - /url: tel:08142293610
+          - listitem [ref=f7e157]:
+            - generic [ref=f7e162]: support@megamart.com
+          - listitem [ref=f7e163]:
+            - generic [ref=f7e168]: Worldwide Delivery Available
+      - generic [ref=f7e169]:
+        - heading "Shop Categories" [level=4] [ref=f7e170]
+        - list [ref=f7e172]:
+          - listitem [ref=f7e173]:
+            - link "Smartphones" [ref=f7e174] [cursor=pointer]:
+              - /url: /category/Smartphones
+          - listitem [ref=f7e177]:
+            - link "Electronics" [ref=f7e178] [cursor=pointer]:
+              - /url: /category/Electronics
+          - listitem [ref=f7e181]:
+            - link "Furniture" [ref=f7e182] [cursor=pointer]:
+              - /url: /category/Furniture
+          - listitem [ref=f7e185]:
+            - link "Shoes" [ref=f7e186] [cursor=pointer]:
+              - /url: /category/Shoes
+          - listitem [ref=f7e189]:
+            - link "Miscellaneous" [ref=f7e190] [cursor=pointer]:
+              - /url: /category/Miscellaneous
+      - generic [ref=f7e193]:
+        - heading "Customer Service" [level=4] [ref=f7e194]
+        - list [ref=f7e196]:
+          - listitem [ref=f7e197]:
+            - link "About Us" [ref=f7e198] [cursor=pointer]:
+              - /url: /about
+          - listitem [ref=f7e201]:
+            - link "Terms & Conditions" [ref=f7e202] [cursor=pointer]:
+              - /url: /terms
+          - listitem [ref=f7e205]:
+            - link "Privacy Policy" [ref=f7e206] [cursor=pointer]:
+              - /url: /privacy
+          - listitem [ref=f7e209]:
+            - link "FAQ" [ref=f7e210] [cursor=pointer]:
+              - /url: /faq
+          - listitem [ref=f7e213]:
+            - link "Cancellation & Returns" [ref=f7e214] [cursor=pointer]:
+              - /url: /returns
+          - listitem [ref=f7e217]:
+            - link "Track My Order" [ref=f7e218] [cursor=pointer]:
+              - /url: /account/orders
+      - generic [ref=f7e221]:
+        - heading "Download App" [level=4] [ref=f7e222]
+        - generic [ref=f7e224]:
+          - link [ref=f7e225] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=f7e231]:
+              - paragraph [ref=f7e232]: Get it on
+              - paragraph [ref=f7e233]: Google Play
+          - link [ref=f7e234] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=f7e237]:
+              - paragraph [ref=f7e238]: Download on the
+              - paragraph [ref=f7e239]: App Store
+        - generic [ref=f7e240]:
+          - paragraph [ref=f7e241]: Follow Us
+          - generic [ref=f7e242]:
+            - link "Facebook" [ref=f7e243] [cursor=pointer]:
+              - /url: "#"
+              - text: f
+            - link "Twitter" [ref=f7e244] [cursor=pointer]:
+              - /url: "#"
+              - text: 𝕏
+            - link "Instagram" [ref=f7e245] [cursor=pointer]:
+              - /url: "#"
+              - text: in
+            - link "YouTube" [ref=f7e246] [cursor=pointer]:
+              - /url: "#"
+              - text: ▶
+    - generic [ref=f7e248]:
+      - paragraph [ref=f7e249]: © 2026 MegaMart. All rights reserved.
+      - paragraph [ref=f7e250]: Designed & Built by Darey Olowo
+  - alert [ref=f7e478]

@@ -1,0 +1,216 @@
+- generic [ref=f11e2]:
+  - navigation [ref=f11e3]:
+    - generic [ref=f11e5]:
+      - generic [ref=f11e6]:
+        - img "logo" [ref=f11e7]
+        - generic [ref=f11e8]: virtualR
+      - list [ref=f11e9]:
+        - listitem [ref=f11e10]:
+          - link "Features" [ref=f11e11] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=f11e12]:
+          - link "Workflow" [ref=f11e13] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=f11e14]:
+          - link "Pricing" [ref=f11e15] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=f11e16]:
+          - link "Testimonials" [ref=f11e17] [cursor=pointer]:
+            - /url: "#"
+      - generic [ref=f11e18]:
+        - link "sign In" [ref=f11e19] [cursor=pointer]:
+          - /url: "#"
+        - link "Create an account" [ref=f11e20] [cursor=pointer]:
+          - /url: "#"
+  - generic [ref=f11e21]:
+    - generic [ref=f11e22]:
+      - heading [level=1] [ref=f11e23]:
+        - text: VitualR build tools
+        - generic [ref=f11e24]: for developers
+      - paragraph [ref=f11e25]: But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects,
+      - generic [ref=f11e26]:
+        - link "start for free" [ref=f11e27] [cursor=pointer]:
+          - /url: "#"
+        - link "Documentation" [ref=f11e28] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=f11e29]:
+        - generic [ref=f11e30]: your browser does not support the video tag.
+        - generic [ref=f11e31]: your browser does not support the video tag.
+    - generic [ref=f11e32]:
+      - generic [ref=f11e33]:
+        - text: feature
+        - heading "Easily build your code" [level=2] [ref=f11e34]:
+          - text: Easily build
+          - generic [ref=f11e35]: your code
+      - generic [ref=f11e36]:
+        - generic [ref=f11e43]:
+          - heading "Drag-and-Drop Interface" [level=5] [ref=f11e44]
+          - paragraph [ref=f11e45]: Easily design and arrange your VR environments with a user-friendly drag-and-drop interface.
+        - generic [ref=f11e58]:
+          - heading "Multi-Platform Compatibility" [level=5] [ref=f11e59]
+          - paragraph [ref=f11e60]: Build VR applications that run seamlessly across multiple platforms, including mobile, desktop, and VR headsets.
+        - generic [ref=f11e66]:
+          - heading "Built-in Templates" [level=5] [ref=f11e67]
+          - paragraph [ref=f11e68]: Jumpstart your VR projects with a variety of built-in templates for different types of applications and environments.
+        - generic [ref=f11e76]:
+          - heading "Real-Time Preview" [level=5] [ref=f11e77]
+          - paragraph [ref=f11e78]: Preview your VR application in real-time as you make changes, allowing for quick iterations and adjustments.
+        - generic [ref=f11e88]:
+          - heading "Collaboration Tools" [level=5] [ref=f11e89]
+          - paragraph [ref=f11e90]: Work together with your team in real-time on VR projects, enabling seamless collaboration and idea sharing.
+        - generic [ref=f11e98]:
+          - heading "Analytics Dashboard" [level=5] [ref=f11e99]
+          - paragraph [ref=f11e100]: Gain valuable insights into user interactions and behavior within your VR applications with an integrated analytics dashboard.
+    - generic [ref=f11e101]:
+      - heading "Accelerate your coding workflow." [level=2] [ref=f11e102]:
+        - text: Accelerate your
+        - generic [ref=f11e103]: coding workflow.
+      - generic [ref=f11e104]:
+        - img "code" [ref=f11e300]
+        - generic [ref=f11e106]:
+          - generic [ref=f11e112]:
+            - heading "Code merge made easy" [level=5] [ref=f11e113]
+            - paragraph [ref=f11e114]: Track the performance of your VR apps and gain insights into user behavior.
+          - generic [ref=f11e120]:
+            - heading "Review code without worry" [level=5] [ref=f11e121]
+            - paragraph [ref=f11e122]: Track the performance of your VR apps and gain insights into user behavior.
+          - generic [ref=f11e128]:
+            - heading "AI Assistance to reduce time" [level=5] [ref=f11e129]
+            - paragraph [ref=f11e130]: Track the performance of your VR apps and gain insights into user behavior.
+          - generic [ref=f11e136]:
+            - heading "Share work in minutes" [level=5] [ref=f11e137]
+            - paragraph [ref=f11e138]: Track the performance of your VR apps and gain insights into user behavior.
+    - generic [ref=f11e139]:
+      - heading "Pricing" [level=2] [ref=f11e140]
+      - generic [ref=f11e141]:
+        - generic [ref=f11e143]:
+          - paragraph [ref=f11e144]: Free
+          - paragraph [ref=f11e145]: $0/Month
+          - list [ref=f11e146]:
+            - listitem [ref=f11e147]:
+              - generic [ref=f11e151]: Private board sharing
+            - listitem [ref=f11e152]:
+              - generic [ref=f11e156]: 5 Gb Storage
+            - listitem [ref=f11e157]:
+              - generic [ref=f11e161]: Web Analytics
+            - listitem [ref=f11e162]:
+              - generic [ref=f11e166]: Private Mode
+          - link "Subscribe" [ref=f11e167] [cursor=pointer]:
+            - /url: "#"
+        - generic [ref=f11e169]:
+          - paragraph [ref=f11e170]: Pro(Most Popular)
+          - paragraph [ref=f11e171]: $10/Month
+          - list [ref=f11e172]:
+            - listitem [ref=f11e173]:
+              - generic [ref=f11e177]: Private board sharing
+            - listitem [ref=f11e178]:
+              - generic [ref=f11e182]: 10 Gb Storage
+            - listitem [ref=f11e183]:
+              - generic [ref=f11e187]: Web Analytics (Advance)
+            - listitem [ref=f11e188]:
+              - generic [ref=f11e192]: Private Mode
+          - link "Subscribe" [ref=f11e193] [cursor=pointer]:
+            - /url: "#"
+        - generic [ref=f11e195]:
+          - paragraph [ref=f11e196]: Enterprise
+          - paragraph [ref=f11e197]: $200/Month
+          - list [ref=f11e198]:
+            - listitem [ref=f11e199]:
+              - generic [ref=f11e203]: Private board sharing
+            - listitem [ref=f11e204]:
+              - generic [ref=f11e208]: Unlimited Storage
+            - listitem [ref=f11e209]:
+              - generic [ref=f11e213]: High Performance Network
+            - listitem [ref=f11e214]:
+              - generic [ref=f11e218]: Private Mode
+          - link "Subscribe" [ref=f11e219] [cursor=pointer]:
+            - /url: "#"
+    - generic [ref=f11e220]:
+      - heading "What people are saying" [level=2] [ref=f11e221]
+      - generic [ref=f11e222]:
+        - generic [ref=f11e224]:
+          - paragraph [ref=f11e225]: I am extremely satisfied with the services provided. The team was responsive, professional, and delivered results beyond my expectations.
+          - img "John Doe" [ref=f11e227]
+          - heading "John Doe" [level=6] [ref=f11e228]
+          - text: Stellar Solutions
+        - generic [ref=f11e230]:
+          - paragraph [ref=f11e231]: I couldn't be happier with the outcome of our project. The team's creativity and problem-solving skills were instrumental in bringing our vision to life
+          - img "Jane Smith" [ref=f11e233]
+          - heading "Jane Smith" [level=6] [ref=f11e234]
+          - text: Blue Horizon Technologies
+        - generic [ref=f11e236]:
+          - paragraph [ref=f11e237]: Working with this company was a pleasure. Their attention to detail and commitment to excellence are commendable. I would highly recommend them to anyone looking for top-notch service.
+          - img "David Johnson" [ref=f11e239]
+          - heading "David Johnson" [level=6] [ref=f11e240]
+          - text: Quantum Innovations
+        - generic [ref=f11e242]:
+          - paragraph [ref=f11e243]: Working with the team at XYZ Company was a game-changer for our project. Their attention to detail and innovative solutions helped us achieve our goals faster than we thought possible. We are grateful for their expertise and professionalism!
+          - img "Ronee Brown" [ref=f11e245]
+          - heading "Ronee Brown" [level=6] [ref=f11e246]
+          - text: Fusion Dynamics
+        - generic [ref=f11e248]:
+          - paragraph [ref=f11e249]: I am amazed by the level of professionalism and dedication shown by the team. They were able to exceed our expectations and deliver outstanding results.
+          - img "Michael Wilson" [ref=f11e251]
+          - heading "Michael Wilson" [level=6] [ref=f11e252]
+          - text: Visionary Creations
+        - generic [ref=f11e254]:
+          - paragraph [ref=f11e255]: The team went above and beyond to ensure our project was a success. Their expertise and dedication are unmatched. I look forward to working with them again in the future.
+          - img "Emily Davis" [ref=f11e257]
+          - heading "Emily Davis" [level=6] [ref=f11e258]
+          - text: Synergy Systems
+    - contentinfo [ref=f11e259]:
+      - generic [ref=f11e260]:
+        - generic [ref=f11e261]:
+          - heading "Resources" [level=3] [ref=f11e262]
+          - list [ref=f11e263]:
+            - listitem [ref=f11e264]:
+              - link "Getting Started" [ref=f11e265] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=f11e266]:
+              - link "Documentation" [ref=f11e267] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=f11e268]:
+              - link "Tutorials" [ref=f11e269] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=f11e270]:
+              - link "API Reference" [ref=f11e271] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=f11e272]:
+              - link "Community Forums" [ref=f11e273] [cursor=pointer]:
+                - /url: "#"
+        - generic [ref=f11e274]:
+          - heading "platform" [level=3] [ref=f11e275]
+          - list [ref=f11e276]:
+            - listitem [ref=f11e277]:
+              - link "Features" [ref=f11e278] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=f11e279]:
+              - link "Supported Devices" [ref=f11e280] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=f11e281]:
+              - link "System Requirements" [ref=f11e282] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=f11e283]:
+              - link "Downloads" [ref=f11e284] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=f11e285]:
+              - link "Release Notes" [ref=f11e286] [cursor=pointer]:
+                - /url: "#"
+        - generic [ref=f11e287]:
+          - heading "Community" [level=3] [ref=f11e288]
+          - list [ref=f11e289]:
+            - listitem [ref=f11e290]:
+              - link "Events" [ref=f11e291] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=f11e292]:
+              - link "Meetups" [ref=f11e293] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=f11e294]:
+              - link "Conferences" [ref=f11e295] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=f11e296]:
+              - link "Hackathons" [ref=f11e297] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=f11e298]:
+              - link "Jobs" [ref=f11e299] [cursor=pointer]:
+                - /url: "#"

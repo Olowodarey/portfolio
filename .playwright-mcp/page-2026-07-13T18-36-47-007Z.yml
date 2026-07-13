@@ -1,0 +1,347 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e5]:
+    - link "logo Movies" [ref=e6] [cursor=pointer]:
+      - /url: /
+      - img "logo" [ref=e7]
+      - generic [ref=e8]: Movies
+    - generic [ref=e10]:
+      - textbox "Search for movies..." [ref=e11]
+      - button "Search" [ref=e12] [cursor=pointer]
+    - generic [ref=e13]:
+      - link "Log in" [ref=e14] [cursor=pointer]:
+        - /url: /login
+      - button "Toggle theme" [ref=e17] [cursor=pointer]
+  - generic [ref=e20]:
+    - navigation [ref=e22]:
+      - generic [ref=e24]:
+        - paragraph [ref=e27]: Browse
+        - list [ref=e28]:
+          - listitem [ref=e29]:
+            - link "Home" [ref=e30] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e37]:
+            - link "Trending" [ref=e38] [cursor=pointer]:
+              - /url: /Trending
+          - listitem [ref=e45]:
+            - link "Upcoming" [ref=e46] [cursor=pointer]:
+              - /url: /upcomingMovies
+          - listitem [ref=e53]:
+            - link "Top Rated" [ref=e54] [cursor=pointer]:
+              - /url: /top-rated
+          - listitem [ref=e60]:
+            - link "Animated" [ref=e61] [cursor=pointer]:
+              - /url: /animatiedmovies
+          - listitem [ref=e67]:
+            - link "Series" [ref=e68] [cursor=pointer]:
+              - /url: /series
+          - listitem [ref=e74]:
+            - link "Genres" [ref=e75] [cursor=pointer]:
+              - /url: /genres
+          - listitem [ref=e82]:
+            - link "People" [ref=e83] [cursor=pointer]:
+              - /url: /people
+          - listitem [ref=e89]:
+            - link "About" [ref=e90] [cursor=pointer]:
+              - /url: /about
+        - generic [ref=e96]:
+          - generic [ref=e97]: Movies
+          - generic [ref=e98]: v1.0
+    - main [ref=e100]:
+      - generic [ref=e101]:
+        - generic [ref=e103]:
+          - heading "What's Trending" [level=2] [ref=e104]
+          - generic [ref=e105]:
+            - button "Today" [ref=e106] [cursor=pointer]
+            - button "This Week" [ref=e107] [cursor=pointer]
+        - generic [ref=e111]:
+          - generic [ref=e112]: Upcoming Movies
+          - generic [ref=e116]:
+            - link "Obsession ★ 8.3 Obsession 2026" [ref=e117] [cursor=pointer]:
+              - /url: /details/1339713
+              - generic [ref=e118]:
+                - generic [ref=e119]:
+                  - img "Obsession" [ref=e120]
+                  - generic [ref=e121]:
+                    - generic [ref=e122]: ★
+                    - generic [ref=e123]: "8.3"
+                - generic [ref=e124]:
+                  - heading "Obsession" [level=3] [ref=e125]
+                  - paragraph [ref=e126]: "2026"
+            - link "Toy Story 5 ★ 7.4 Toy Story 5 2026" [ref=e127] [cursor=pointer]:
+              - /url: /details/1084244
+              - generic [ref=e128]:
+                - generic [ref=e129]:
+                  - img "Toy Story 5" [ref=e130]
+                  - generic [ref=e131]:
+                    - generic [ref=e132]: ★
+                    - generic [ref=e133]: "7.4"
+                - generic [ref=e134]:
+                  - heading "Toy Story 5" [level=3] [ref=e135]
+                  - paragraph [ref=e136]: "2026"
+            - link "Backrooms ★ 6.8 Backrooms 2026" [ref=e137] [cursor=pointer]:
+              - /url: /details/1083381
+              - generic [ref=e138]:
+                - generic [ref=e139]:
+                  - img "Backrooms" [ref=e140]
+                  - generic [ref=e141]:
+                    - generic [ref=e142]: ★
+                    - generic [ref=e143]: "6.8"
+                - generic [ref=e144]:
+                  - heading "Backrooms" [level=3] [ref=e145]
+                  - paragraph [ref=e146]: "2026"
+            - link "Deep Water ★ 7.3 Deep Water 2026" [ref=e147] [cursor=pointer]:
+              - /url: /details/1127384
+              - generic [ref=e148]:
+                - generic [ref=e149]:
+                  - img "Deep Water" [ref=e150]
+                  - generic [ref=e151]:
+                    - generic [ref=e152]: ★
+                    - generic [ref=e153]: "7.3"
+                - generic [ref=e154]:
+                  - heading "Deep Water" [level=3] [ref=e155]
+                  - paragraph [ref=e156]: "2026"
+            - link "Evil Dead Burn ★ 7.0 Evil Dead Burn 2026" [ref=e157] [cursor=pointer]:
+              - /url: /details/1212763
+              - generic [ref=e158]:
+                - generic [ref=e159]:
+                  - img "Evil Dead Burn" [ref=e160]
+                  - generic [ref=e161]:
+                    - generic [ref=e162]: ★
+                    - generic [ref=e163]: "7.0"
+                - generic [ref=e164]:
+                  - heading "Evil Dead Burn" [level=3] [ref=e165]
+                  - paragraph [ref=e166]: "2026"
+            - 'link "Avatar Aang: The Last Airbender ★ 0.0 Avatar Aang: The Last Airbender 2026" [ref=e167] [cursor=pointer]':
+              - /url: /details/980431
+              - generic [ref=e168]:
+                - generic [ref=e169]:
+                  - 'img "Avatar Aang: The Last Airbender" [ref=e170]'
+                  - generic [ref=e171]:
+                    - generic [ref=e172]: ★
+                    - generic [ref=e173]: "0.0"
+                - generic [ref=e174]:
+                  - 'heading "Avatar Aang: The Last Airbender" [level=3] [ref=e175]'
+                  - paragraph [ref=e176]: "2026"
+            - link "Minions & Monsters ★ 6.3 Minions & Monsters 2026" [ref=e177] [cursor=pointer]:
+              - /url: /details/1315772
+              - generic [ref=e178]:
+                - generic [ref=e179]:
+                  - img "Minions & Monsters" [ref=e180]
+                  - generic [ref=e181]:
+                    - generic [ref=e182]: ★
+                    - generic [ref=e183]: "6.3"
+                - generic [ref=e184]:
+                  - heading "Minions & Monsters" [level=3] [ref=e185]
+                  - paragraph [ref=e186]: "2026"
+            - link "The Odyssey ★ 4.7 The Odyssey 2026" [ref=e187] [cursor=pointer]:
+              - /url: /details/1368337
+              - generic [ref=e188]:
+                - generic [ref=e189]:
+                  - img "The Odyssey" [ref=e190]
+                  - generic [ref=e191]:
+                    - generic [ref=e192]: ★
+                    - generic [ref=e193]: "4.7"
+                - generic [ref=e194]:
+                  - heading "The Odyssey" [level=3] [ref=e195]
+                  - paragraph [ref=e196]: "2026"
+            - 'link "Spider-Man: Brand New Day ★ 0.0 Spider-Man: Brand New Day 2026" [ref=e197] [cursor=pointer]':
+              - /url: /details/969681
+              - generic [ref=e198]:
+                - generic [ref=e199]:
+                  - 'img "Spider-Man: Brand New Day" [ref=e200]'
+                  - generic [ref=e201]:
+                    - generic [ref=e202]: ★
+                    - generic [ref=e203]: "0.0"
+                - generic [ref=e204]:
+                  - 'heading "Spider-Man: Brand New Day" [level=3] [ref=e205]'
+                  - paragraph [ref=e206]: "2026"
+            - link "Kraken ★ 6.4 Kraken 2026" [ref=e207] [cursor=pointer]:
+              - /url: /details/1110034
+              - generic [ref=e208]:
+                - generic [ref=e209]:
+                  - img "Kraken" [ref=e210]
+                  - generic [ref=e211]:
+                    - generic [ref=e212]: ★
+                    - generic [ref=e213]: "6.4"
+                - generic [ref=e214]:
+                  - heading "Kraken" [level=3] [ref=e215]
+                  - paragraph [ref=e216]: "2026"
+            - link "The Stain ★ 4.0 The Stain 2026" [ref=e217] [cursor=pointer]:
+              - /url: /details/1417285
+              - generic [ref=e218]:
+                - generic [ref=e219]:
+                  - img "The Stain" [ref=e220]
+                  - generic [ref=e221]:
+                    - generic [ref=e222]: ★
+                    - generic [ref=e223]: "4.0"
+                - generic [ref=e224]:
+                  - heading "The Stain" [level=3] [ref=e225]
+                  - paragraph [ref=e226]: "2026"
+            - 'link "Detective Conan: Fallen Angel of the Highway ★ 7.8 Detective Conan: Fallen Angel of the Highway 2026" [ref=e227] [cursor=pointer]':
+              - /url: /details/1545621
+              - generic [ref=e228]:
+                - generic [ref=e229]:
+                  - 'img "Detective Conan: Fallen Angel of the Highway" [ref=e230]'
+                  - generic [ref=e231]:
+                    - generic [ref=e232]: ★
+                    - generic [ref=e233]: "7.8"
+                - generic [ref=e234]:
+                  - 'heading "Detective Conan: Fallen Angel of the Highway" [level=3] [ref=e235]'
+                  - paragraph [ref=e236]: "2026"
+          - link [ref=e237] [cursor=pointer]:
+            - /url: /upcomingMovies
+            - button "See More" [ref=e239]
+        - generic [ref=e240]:
+          - generic [ref=e241]: Series
+          - generic [ref=e245]:
+            - generic [ref=e246] [cursor=pointer]:
+              - generic [ref=e247]:
+                - img "Teach You a Lesson" [ref=e248]
+                - generic [ref=e249]:
+                  - generic [ref=e250]: ★
+                  - generic [ref=e251]: "9.5"
+              - generic [ref=e252]:
+                - heading "Teach You a Lesson" [level=3] [ref=e253]
+                - paragraph [ref=e254]: "2026"
+            - generic [ref=e255] [cursor=pointer]:
+              - generic [ref=e256]:
+                - img "Dutton Ranch" [ref=e257]
+                - generic [ref=e258]:
+                  - generic [ref=e259]: ★
+                  - generic [ref=e260]: "9.2"
+              - generic [ref=e261]:
+                - heading "Dutton Ranch" [level=3] [ref=e262]
+                - paragraph [ref=e263]: "2026"
+            - generic [ref=e264] [cursor=pointer]:
+              - generic [ref=e265]:
+                - img "The WONDERfools" [ref=e266]
+                - generic [ref=e267]:
+                  - generic [ref=e268]: ★
+                  - generic [ref=e269]: "9.0"
+              - generic [ref=e270]:
+                - heading "The WONDERfools" [level=3] [ref=e271]
+                - paragraph [ref=e272]: "2026"
+            - generic [ref=e273] [cursor=pointer]:
+              - generic [ref=e274]:
+                - img "Breaking Bad" [ref=e275]
+                - generic [ref=e276]:
+                  - generic [ref=e277]: ★
+                  - generic [ref=e278]: "8.9"
+              - generic [ref=e279]:
+                - heading "Breaking Bad" [level=3] [ref=e280]
+                - paragraph [ref=e281]: "2008"
+            - generic [ref=e282] [cursor=pointer]:
+              - generic [ref=e283]:
+                - img "Off Campus" [ref=e284]
+                - generic [ref=e285]:
+                  - generic [ref=e286]: ★
+                  - generic [ref=e287]: "8.9"
+              - generic [ref=e288]:
+                - heading "Off Campus" [level=3] [ref=e289]
+                - paragraph [ref=e290]: "2026"
+            - generic [ref=e291] [cursor=pointer]:
+              - generic [ref=e292]:
+                - 'img "Frieren: Beyond Journey''s End" [ref=e293]'
+                - generic [ref=e294]:
+                  - generic [ref=e295]: ★
+                  - generic [ref=e296]: "8.8"
+              - generic [ref=e297]:
+                - 'heading "Frieren: Beyond Journey''s End" [level=3] [ref=e298]'
+                - paragraph [ref=e299]: "2023"
+            - generic [ref=e300] [cursor=pointer]:
+              - generic [ref=e301]:
+                - 'img "Avatar: The Last Airbender" [ref=e302]'
+                - generic [ref=e303]:
+                  - generic [ref=e304]: ★
+                  - generic [ref=e305]: "8.8"
+              - generic [ref=e306]:
+                - 'heading "Avatar: The Last Airbender" [level=3] [ref=e307]'
+                - paragraph [ref=e308]: "2005"
+            - generic [ref=e309] [cursor=pointer]:
+              - generic [ref=e310]:
+                - img "The Chosen" [ref=e311]
+                - generic [ref=e312]:
+                  - generic [ref=e313]: ★
+                  - generic [ref=e314]: "8.8"
+              - generic [ref=e315]:
+                - heading "The Chosen" [level=3] [ref=e316]
+                - paragraph [ref=e317]: "2019"
+            - generic [ref=e318] [cursor=pointer]:
+              - generic [ref=e319]:
+                - img "When Life Gives You Tangerines" [ref=e320]
+                - generic [ref=e321]:
+                  - generic [ref=e322]: ★
+                  - generic [ref=e323]: "8.8"
+              - generic [ref=e324]:
+                - heading "When Life Gives You Tangerines" [level=3] [ref=e325]
+                - paragraph [ref=e326]: "2025"
+            - generic [ref=e327] [cursor=pointer]:
+              - generic [ref=e328]:
+                - img "Arcane" [ref=e329]
+                - generic [ref=e330]:
+                  - generic [ref=e331]: ★
+                  - generic [ref=e332]: "8.8"
+              - generic [ref=e333]:
+                - heading "Arcane" [level=3] [ref=e334]
+                - paragraph [ref=e335]: "2021"
+            - generic [ref=e336] [cursor=pointer]:
+              - generic [ref=e337]:
+                - img "Heated Rivalry" [ref=e338]
+                - generic [ref=e339]:
+                  - generic [ref=e340]: ★
+                  - generic [ref=e341]: "8.8"
+              - generic [ref=e342]:
+                - heading "Heated Rivalry" [level=3] [ref=e343]
+                - paragraph [ref=e344]: "2025"
+            - generic [ref=e345] [cursor=pointer]:
+              - generic [ref=e346]:
+                - img "Reply 1988" [ref=e347]
+                - generic [ref=e348]:
+                  - generic [ref=e349]: ★
+                  - generic [ref=e350]: "8.7"
+              - generic [ref=e351]:
+                - heading "Reply 1988" [level=3] [ref=e352]
+                - paragraph [ref=e353]: "2015"
+          - link [ref=e354] [cursor=pointer]:
+            - /url: /series
+            - button "See More" [ref=e356]
+  - contentinfo [ref=e357]:
+    - generic [ref=e358]:
+      - generic [ref=e359]:
+        - link "Facebook" [ref=e360] [cursor=pointer]:
+          - /url: "#"
+        - link "Instagram" [ref=e364] [cursor=pointer]:
+          - /url: "#"
+        - link "X" [ref=e368] [cursor=pointer]:
+          - /url: "#"
+        - link "GitHub" [ref=e372] [cursor=pointer]:
+          - /url: "#"
+        - link "YouTube" [ref=e376] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=e380]:
+        - link "About" [ref=e381] [cursor=pointer]:
+          - /url: /about
+        - link "Genres" [ref=e382] [cursor=pointer]:
+          - /url: /genres
+        - link "Top Rated" [ref=e383] [cursor=pointer]:
+          - /url: /top-rated
+      - paragraph [ref=e384]: © 2024 Darey. All rights reserved.
+  - alert [ref=e385]
+  - dialog [ref=e386]:
+    - button "Close welcome" [ref=e387] [cursor=pointer]
+    - generic [ref=e390]:
+      - button "Skip" [ref=e392] [cursor=pointer]
+      - generic [ref=e401]:
+        - heading "Welcome to Movies" [level=2] [ref=e402]
+        - paragraph [ref=e403]: Your personal space to track every film and show. Save what you want to see, remember everything you've watched.
+      - generic [ref=e404]:
+        - button "Go to slide 1" [ref=e405] [cursor=pointer]
+        - button "Go to slide 2" [ref=e406] [cursor=pointer]
+        - button "Go to slide 3" [ref=e407] [cursor=pointer]
+        - button "Go to slide 4" [ref=e408] [cursor=pointer]
+      - generic [ref=e409]:
+        - button "Back" [disabled]
+        - button "Skip" [ref=e410] [cursor=pointer]
+        - button "Next" [ref=e411] [cursor=pointer]:
+          - text: Next
+          - generic [ref=e412]: →
