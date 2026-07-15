@@ -39,6 +39,8 @@ const categories: { id: "all" | Category; label: string }[] = [
 
 const projects: Project[] = [
 
+
+
   {
     title: "PMovies",
     category: "webapp",
@@ -50,6 +52,19 @@ const projects: Project[] = [
     liveUrl: "https://pmovies-hub.vercel.app/",
     sourceUrl: "https://github.com/Olowodarey/pmovies",
     image: "/projects/pmovies.png",
+  },
+
+    {
+    title: "Beathub",
+    category: "webapp",
+    categoryLabel: "Web App",
+    description: "Admin dashboard for a modern music platform.",
+    detail:
+      "A full-stack, production-deployed workspace for running the business side of a music catalogue. Admins moderate uploaded tracks, labels manage their signed artists, creators apply for upgraded roles and promote releases through a self-serve ad marketplace, and everyone collaborates on playlists — behind a fast, keyboard-friendly (⌘K) pure-dark interface. Built as a pnpm monorepo with a Next.js 16 front end and a NestJS + Prisma API, featuring a fully custom auth system (email/password and Google OAuth) issuing its own JWT sessions.",
+    tags: ["Next.js", "NestJS", "Prisma", "PostgreSQL"],
+    liveUrl: "https://beathub-six.vercel.app",
+    sourceUrl: "https://github.com/Olowodarey/Beathub",
+    image: "/projects/beathub.png",
   },
 
   {
@@ -124,34 +139,7 @@ const projects: Project[] = [
     liveUrl: "https://gigipay-app.vercel.app/",
     image: "/projects/gigipay.png",
   },
-
-
-
-    {
-    title: "VR School Platform",
-    category: "webapp",
-    categoryLabel: "Web App",
-    description: "Immersive educational platform.",
-    detail:
-      "An immersive virtual-reality education platform that introduces students and institutions to VR/AR learning tools, with content on how VR is reshaping classrooms.",
-    tags: ["React", "JS", "Tailwind"],
-    liveUrl: "https://vr-sch-oictgg.vercel.app/",
-    image: "/projects/vr-school.png",
-  },
-
-
-    {
-    title: "Virtual Aid",
-    category: "webapp",
-    categoryLabel: "Web App",
-    description: "AI-powered health assistant for medical information.",
-    detail:
-      "An AI-powered assistant that answers medical and health questions, aimed at giving users quick, reliable guidance on symptoms and general health information.",
-    tags: ["Next.js", "AI", "Health"],
-    liveUrl: "https://virtual-aid.vercel.app/",
-    sourceUrl: "https://github.com/Olowodarey/VR-light",
-    image: "/projects/virtual-aid.png",
-  },
+   
 ];
 
 export function PortfolioTab() {
