@@ -228,6 +228,7 @@ export function PortfolioTab() {
       </div>
 
       <motion.div
+        key={activeCategory}
         initial="hidden"
         whileInView="visible"
         viewport={viewportOnce}
