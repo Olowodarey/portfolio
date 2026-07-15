@@ -100,7 +100,7 @@ export function PortfolioShell() {
           </motion.div>
 
           {/* Tab content — scrolls internally so the panel height never changes between tabs */}
-          <div className="thin-scrollbar flex-1 overflow-y-auto px-5 pb-8 pt-16 sm:px-8 sm:pb-10 sm:pt-20">
+          <div className="thin-scrollbar flex-1 overflow-y-auto px-5 pb-8 pt-24 sm:px-8 sm:pb-10 sm:pt-20">
             <AnimatePresence mode="wait" custom={direction}>
               <motion.div
                 key={active}
