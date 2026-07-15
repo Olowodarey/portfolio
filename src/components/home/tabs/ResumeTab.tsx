@@ -113,10 +113,10 @@ const experience: ExperienceItem[] = [
     period: "2024 — Present",
     bullets: [
       "Shipped responsive UI components across 3+ open-source and freelance web projects, improving cross-device usability for real-world user bases.",
-      "Collaborated with distributed developer teams using Git & GitHub workflows — managing branches, pull requests and code reviews to maintain code quality.",
-      "Integrated REST API endpoints into frontend interfaces, enabling dynamic data rendering and improving application interactivity.",
-      "Applied mobile-first design principles to rebuild legacy UI sections, reducing layout breakpoints and enhancing usability on small-screen devices.",
-      "Diagnosed and resolved 10+ bugs across active repositories using structured debugging techniques, cutting reported UI defects by an estimated 30%.",
+      "Developed smart contracts and Web3 integrations across Stellar (Soroban), Starknet (Cairo), and EVM chains as part of open-source ecosystem contributions.",
+      "Collaborated with distributed teams via Git & GitHub — managing branches, pull requests, and code reviews to maintain code quality.",
+      "Integrated REST API endpoints into frontend interfaces, enabling dynamic data rendering and improved interactivity.",
+      "Diagnosed and resolved 10+ bugs across active repositories using structured debugging, cutting reported UI defects by an estimated 30%.",
     ],
   },
   {
@@ -125,8 +125,8 @@ const experience: ExperienceItem[] = [
     location: "Abuja, Nigeria",
     period: "Jun 2022 — Jun 2023",
     bullets: [
-      "Delivered technical science curriculum to 30+ students, developing the ability to communicate complex concepts clearly — directly applicable to team stand-ups and code reviews.",
-      "Designed structured lesson plans and performance records, reinforcing organisational skills applied to project planning and task management in development workflows.",
+      "Delivered technical science curriculum to 30+ students, sharpening the ability to communicate complex concepts clearly — directly applicable to stand-ups, code reviews, and client interactions.",
+      "Designed structured lesson plans and performance records, reinforcing organisational skills now applied to project planning and task management.",
     ],
   },
   {
@@ -135,8 +135,8 @@ const experience: ExperienceItem[] = [
     location: "Kaduna, Nigeria",
     period: "Mar 2019 — Dec 2019",
     bullets: [
-      "Maintained detailed daily production records with zero data-entry errors across an 8-month tenure, cultivating a precision-driven approach now applied to code and technical reporting.",
-      "Identified and escalated 15+ recurring production anomalies using root-cause analysis — a problem-solving methodology directly transferable to debugging frontend issues.",
+      "Maintained detailed daily production records with zero data-entry errors over an 8-month tenure, cultivating precision now applied to code and technical documentation.",
+      "Identified and escalated 15+ recurring production anomalies using root-cause analysis — a methodology directly transferable to debugging.",
     ],
   },
 ];
@@ -166,10 +166,12 @@ export function ResumeTab() {
         variants={fadeInUp}
         className="mt-6 max-w-2xl text-sm leading-relaxed text-muted-foreground md:text-base"
       >
-        Frontend and Web3 developer building responsive, production-ready web
-        applications — including a live blockchain payment protocol and a
-        football prediction platform on Celo. I combine engineering precision
-        with a track record of shipping real projects used by real users.
+        Frontend and Web3 developer building secure, production-grade web
+        applications and on-chain products across Celo, Base, Stellar and
+        Starknet — including a live blockchain payment protocol and a Solana
+        Telegram bot studio with real users. I care about clean architecture,
+        low-friction user experiences, and building things people actually
+        want to use.
       </motion.p>
 
       <motion.a
@@ -177,7 +179,7 @@ export function ResumeTab() {
         whileInView="visible"
         viewport={viewportOnce}
         variants={fadeInUp}
-        href="/Olowo-Dare-CV.pdf"
+        href="/Darey_Olowo_CV.pdf"
         download
         className="mt-6 inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-primary to-blue-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary/20 transition-transform hover:-translate-y-0.5"
       >

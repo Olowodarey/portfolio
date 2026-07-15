@@ -3,7 +3,8 @@
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import { Eye, ExternalLink, Github, X } from "lucide-react";
+import { Eye, ExternalLink, X } from "lucide-react";
+import { FaGithub } from "react-icons/fa6";
 import Image from "next/image";
 import Link from "next/link";
 import { SectionHeading } from "./AboutTab";
@@ -185,27 +186,45 @@ export function PortfolioTab() {
       </motion.p>
 
       {/* Category filters */}
-      <div className="mt-6 flex flex-wrap items-center gap-1 border-b border-border pb-3">
-        {categories.map((cat) => (
-          <button
-            key={cat.id}
-            onClick={() => setActiveCategory(cat.id)}
-            className={`relative rounded-lg px-3.5 py-1.5 text-sm font-medium transition-colors ${
-              activeCategory === cat.id
-                ? "text-primary"
-                : "text-muted-foreground hover:text-foreground"
-            }`}
-          >
-            {activeCategory === cat.id && (
-              <motion.span
-                layoutId="active-category"
-                className="absolute inset-0 rounded-lg bg-primary/10"
-                transition={{ type: "spring", stiffness: 400, damping: 30 }}
-              />
-            )}
-            <span className="relative z-10">{cat.label}</span>
-          </button>
-        ))}
+      <div className="mt-6 flex flex-wrap items-center gap-2">
+        {categories.map((cat) => {
+          const count =
+            cat.id === "all"
+              ? projects.length
+              : projects.filter((p) => p.category === cat.id).length;
+          const isActive = activeCategory === cat.id;
+          return (
+            <button
+              key={cat.id}
+              onClick={() => setActiveCategory(cat.id)}
+              className={`relative rounded-full border px-4 py-1.5 text-sm font-medium transition-all ${
+                isActive
+                  ? "border-primary/50 text-primary shadow-sm shadow-primary/10"
+                  : "border-border bg-foreground/5 text-muted-foreground hover:-translate-y-0.5 hover:border-primary/30 hover:text-foreground"
+              }`}
+            >
+              {isActive && (
+                <motion.span
+                  layoutId="active-category"
+                  className="absolute inset-0 rounded-full bg-primary/10"
+                  transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                />
+              )}
+              <span className="relative z-10 flex items-center gap-1.5">
+                {cat.label}
+                <span
+                  className={`rounded-full px-1.5 text-[10px] tabular-nums leading-4 ${
+                    isActive
+                      ? "bg-primary/15 text-primary"
+                      : "bg-foreground/10 text-muted-foreground"
+                  }`}
+                >
+                  {count}
+                </span>
+              </span>
+            </button>
+          );
+        })}
       </div>
 
       <motion.div
@@ -361,7 +380,7 @@ export function PortfolioTab() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-primary/40 hover:bg-muted/20"
                   >
-                    <Github className="h-4 w-4" />
+                    <FaGithub className="h-4 w-4" />
                     Code
                   </Link>
                 )}

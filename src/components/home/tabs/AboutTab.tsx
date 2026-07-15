@@ -5,6 +5,7 @@ import {
   Code,
   Smartphone,
   Server,
+  Sparkles,
   Zap,
   ShoppingCart,
   type LucideIcon,
@@ -38,7 +39,7 @@ const services: Service[] = [
     icon: Server,
     title: "Backend Development",
     description:
-      "REST APIs, authentication and databases built with Node.js and Next.js.",
+      "REST APIs, custom authentication and databases with Node.js, NestJS, Prisma and PostgreSQL.",
     iconColor: "text-cyan-400",
     iconBg: "bg-cyan-500/10",
   },
@@ -66,6 +67,20 @@ const services: Service[] = [
     iconColor: "text-teal-400",
     iconBg: "bg-teal-500/10",
   },
+  {
+    icon: Sparkles,
+    title: "AI Integration",
+    description:
+      "AI-powered product features — from on-chain wallet analytics to assistants built on LLM APIs.",
+    iconColor: "text-fuchsia-400",
+    iconBg: "bg-fuchsia-500/10",
+  },
+];
+
+const stats = [
+  { value: "8+", label: "Live projects shipped" },
+  { value: "6", label: "Blockchains built on" },
+  { value: "2+", label: "Years shipping to production" },
 ];
 
 export function AboutTab() {
@@ -81,24 +96,52 @@ export function AboutTab() {
         className="mt-6 space-y-4 text-sm leading-relaxed text-muted-foreground md:text-base"
       >
         <motion.p variants={fadeInUp}>
-          I&apos;m a software engineer working across full-stack development,
-          blockchain, and zero-knowledge systems — building secure, user-focused
-          applications that solve real problems.
+          I&apos;m a frontend developer and Web3 engineer who ships. My recent
+          work includes a live blockchain payment protocol on Celo that lets
+          anyone receive crypto with just a Gmail login, a zero-knowledge
+          credit platform on Stellar that scores gig workers without exposing
+          their data, and a production music-platform dashboard with its own
+          custom auth system.
         </motion.p>
         <motion.p variants={fadeInUp}>
-          On the frontend I build with React, Next.js and TypeScript. On the
-          backend I work with Node.js, and I develop Soroban smart contracts on
-          Stellar alongside Solidity and Cairo contracts for Ethereum and
-          Starknet — including privacy-preserving apps powered by zero-knowledge
-          proofs.
+          My home base is the frontend — React, Next.js and TypeScript — and I
+          write smart contracts in Solidity, Cairo and Soroban for Ethereum,
+          Starknet and Stellar, including privacy-preserving apps powered by
+          zero-knowledge proofs. I also bring hands-on backend experience with
+          Node.js, NestJS, Prisma and PostgreSQL when a project needs the full
+          stack.
         </motion.p>
         <motion.p variants={fadeInUp}>
           I also build enterprise solutions with the Microsoft Power Platform,
           helping teams automate workflows and ship internal tools faster.
-          Whether it&apos;s a Web3 protocol or an internal business tool, I care
-          about clean architecture and building things people actually want to
-          use.
+          Whether it&apos;s a Web3 protocol or an internal business tool, I hold
+          the same bar: clean architecture, fast interfaces, and features real
+          users actually rely on.
         </motion.p>
+      </motion.div>
+
+      {/* Quick stats */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewportOnce}
+        variants={staggerContainer}
+        className="mt-8 grid grid-cols-3 gap-3"
+      >
+        {stats.map(({ value, label }) => (
+          <motion.div
+            key={label}
+            variants={staggerItem}
+            className="rounded-xl border border-border bg-foreground/5 p-4 text-center transition-colors hover:border-primary/30"
+          >
+            <p className="font-heading bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-2xl font-bold text-transparent md:text-3xl">
+              {value}
+            </p>
+            <p className="mt-1 text-[11px] leading-snug text-muted-foreground md:text-xs">
+              {label}
+            </p>
+          </motion.div>
+        ))}
       </motion.div>
 
       {/* What I'm Doing */}
